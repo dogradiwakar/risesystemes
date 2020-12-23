@@ -1,0 +1,226 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/5-mistakes-to-avoid-in-a-cloud-native-app-development-project?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>5 Mistakes To Avoid In a Cloud Native App Development Project</title>
+    <link rel="canonical" href="5-mistakes-to-avoid-in-a-cloud-native-app-development-project.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="These are the pitfalls you want to avoid when developing cloud native apps as you migrate to the cloud.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "5 Mistakes To Avoid In a Cloud Native App Development Project",
+        "datePublished": "2019-12-26T17:00:00Z",
+        "dateModified": "2020-10-02T23:28:09.797Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/5-mistakes-to-avoid-in-a-cloud-native-app-development-project",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_photography/meeting_redapt_header_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="5-mistakes-to-avoid-in-a-cloud-native-app-development-project.html">5 Mistakes To Avoid In a Cloud Native App Development Project</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Dec 26, 2019 5:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>As your enterprise migrates to the cloud, developing cloud native apps will likely be at the top of the list of your projects. Whether you’re doing the work in-house or with a partner, these are the pitfalls you want to avoid.</p>
+
+<h2>&nbsp;</h2>
+<h2>5 Most Common Cloud Native Mistakes</h2>
+<h3><strong><amp-img src="../hubfs/Redapt%202019/icons/redapt_icons_capabilities_cloud-native-apps.svg" alt="redapt_icons_capabilities_cloud-native-apps" width="400.0" height="400.0" layout="responsive"></amp-img>1. Not knowing what it means to be cloud native</strong></h3>
+<p>As you start to explore your own cloud native app development projects, keep in mind that cloud native apps don’t have to only live in the cloud. Microservices, containers, declarative APIs—these inclusions are what define cloud native, and the apps built around them can be run on any platform.</p>
+<p><a href="https://content.redapt.com/cloud-native-apps" rel="noopener" target="_blank">Click here to read the complete guide on building cloud native applications.</a></p>
+<p>Knowing this at the beginning will go a long way toward making your cloud native app project successful.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1f0f2.png?width=75&amp;name=cloud-with-question-mark_redapt_icon_1.png" alt="cloud-with-question-mark_redapt_icon_1" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=38&amp;name=cloud-with-question-mark_redapt_icon_1.png 38w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=75&amp;name=cloud-with-question-mark_redapt_icon_1.png 75w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=113&amp;name=cloud-with-question-mark_redapt_icon_1.png 113w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=150&amp;name=cloud-with-question-mark_redapt_icon_1.png 150w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=188&amp;name=cloud-with-question-mark_redapt_icon_1.png 188w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-with-question-mark_redapt_icon_1.png?width=225&amp;name=cloud-with-question-mark_redapt_icon_1.png 225w" height="167.0"></amp-img>2. Lack of understanding</strong></h3>
+<p>Developing cloud native apps involves a lot of moving parts. One pitfall that can be easy to fall into is embarking upon a project without a clear understanding of your own usage patterns, scaling needs, and the tools available.</p>
+<p>In other words, know what you need from a cloud native app <em>before</em> you start building one.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_10a2c.jpg?width=75&amp;name=cloud-acceleration_redapt_icon_1.jpg" alt="cloud-acceleration_redapt_icon_1" width="80.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=38&amp;name=cloud-acceleration_redapt_icon_1.jpg 38w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=75&amp;name=cloud-acceleration_redapt_icon_1.jpg 75w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=113&amp;name=cloud-acceleration_redapt_icon_1.jpg 113w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=150&amp;name=cloud-acceleration_redapt_icon_1.jpg 150w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=188&amp;name=cloud-acceleration_redapt_icon_1.jpg 188w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-acceleration_redapt_icon_1.jpg?width=225&amp;name=cloud-acceleration_redapt_icon_1.jpg 225w" height="81.0"></amp-img>3. Not leveraging the strengths of the cloud</strong></h3>
+<p>One of the major benefits of the cloud is an accelerated development and delivery cycle.</p>
+<p>If your finished app is static—and your development team is unable to iterate and deploy at a rapid pace—then you’re not really putting the strengths of the cloud to use. Chances are, all you’ve really done is rebuild an app you already use.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/redapt_icon-team-people-culture77f4.png?width=75&amp;name=redapt_icon-team-people-culture.png" alt="redapt_icon-team-people-culture" width="168.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=38&amp;name=redapt_icon-team-people-culture.png 38w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=75&amp;name=redapt_icon-team-people-culture.png 75w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=113&amp;name=redapt_icon-team-people-culture.png 113w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=150&amp;name=redapt_icon-team-people-culture.png 150w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=188&amp;name=redapt_icon-team-people-culture.png 188w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-team-people-culture.png?width=225&amp;name=redapt_icon-team-people-culture.png 225w" height="167.0"></amp-img>4. Forgetting about tertiary teams</strong></h3>
+<p>Cloud native applications are not just for your development team. Networking, storage, and overall IT squads will also be working within your new cloud environment in some capacity.</p>
+<p>Make sure all of your internal teams are involved in the process of roadmapping your app’s architecture in order to avoid costly roadblocks in development.</p>
+<h3><strong><amp-img src="../hubfs/Redapt%202019/icons/redapt_icons_capabilities_DevOps-enablement.svg" alt="redapt_icons_capabilities_DevOps-enablement" width="400.0" height="400.0" layout="responsive"></amp-img>5. Not using DevOps</strong></h3>
+<p>Similar to leveraging the strengths of the cloud, failing to lean into the power of DevOps will result in an app that is not really cloud native.</p>
+<p>The foundation of DevOps is made up of all the things that make an application cloud native, from containers and microservices, to continuous development and delivery.</p>
+<h2><strong>Avoiding these mistakes</strong></h2>
+<p><strong><amp-img src="../hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1d1a9.jpg?width=1200&amp;name=concerned-person_redapt_wide-photo_1.jpg" alt="concerned-person_redapt_wide-photo_1" width="1200.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=600&amp;name=concerned-person_redapt_wide-photo_1.jpg 600w, https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=1200&amp;name=concerned-person_redapt_wide-photo_1.jpg 1200w, https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=1800&amp;name=concerned-person_redapt_wide-photo_1.jpg 1800w, https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=2400&amp;name=concerned-person_redapt_wide-photo_1.jpg 2400w, https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=3000&amp;name=concerned-person_redapt_wide-photo_1.jpg 3000w, https://www.redapt.com/hs-fs/hubfs/_photography/concerned-person_redapt_wide-photo_1.jpg?width=3600&amp;name=concerned-person_redapt_wide-photo_1.jpg 3600w" height="288.0" layout="responsive"></amp-img></strong></p>
+<p>The simple answer is to go into your cloud native app development project with a clear and concise vision.</p>
+<p>You need to know what your goals are, the strength of your current in-house technical abilities, and whether it will be more efficient—and cost-effective—to work with a partner or internal teams.</p>
+<h2><strong>What if you commit one of these mistakes and need to save your project?</strong></h2>
+<p>Listen to the late, great Douglas Adams and DON’T PANIC. None of these mistakes are insurmountable before your cloud native app project is completed.</p>
+<p>Stop and take stock of where you are in the process, where you need to go, then pivot accordingly. You might spend more on resources, but you’ll be much better off in the end.</p>
+<h2><strong>Need help getting started?</strong></h2>
+<p>Our team members have years of experience in creating cloud native applications and can help you avoid these problems. We can also help you take advantage of speed and time to market and keep your overall TCO low, especially when it comes to maintenance, management, and cloud costs.</p>
+<p><a href="../contact.html" rel="noopener" target="_blank">Reach out to us today</a> for help with your cloud native app development. Otherwise, <a href="https://content.redapt.com/cloud-native-solutions" rel="noopener" target="_blank">click here to read the complete guide on building cloud native applications.</a></p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="5-mistakes-to-avoid-in-a-cloud-native-app-development-project.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq8ee9.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=5+Mistakes+To+Avoid+In+a+Cloud+Native+App+Development+Project&amp;pi=23650930850&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/5-mistakes-to-avoid-in-a-cloud-native-app-development-project?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:15 GMT -->
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/pivotal-container-service-what-developers-need-to-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Pivotal Container Service: What Developers Need to Know</title>
+    <link rel="canonical" href="pivotal-container-service-what-developers-need-to-know.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Take a look as we focus on some of the key things developers should know about Pivotal Container Service (PKS) and how it simplifies Kubernetes adoption.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Pivotal Container Service: What Developers Need to Know",
+        "datePublished": "2018-09-07T00:00:00Z",
+        "dateModified": "2020-08-31T21:07:20.476Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/pivotal-container-service-what-developers-need-to-know",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/5bbce034851d4cc44f27f88b_RDPT-049002_Blog_4_What_Devs_Need_To_Know.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="pivotal-container-service-what-developers-need-to-know.html">Pivotal Container Service: What Developers Need to Know</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Sep 7, 2018 12:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Pivotal Container Service (PKS) <strong>simplifies Kubernetes adoption for VMware-based IT organizations</strong> in a variety of ways. In this post, we'll focus on some of the key things developers should know about PKS.</p>
+
+<h2><strong>What is PKS?</strong></h2>
+<p>PKS is a commercially supported release of the open source Kubo project that provides a simple way to deploy and operate enterprise-grade Kubernetes. With PKS, you can reliably deploy and run containerized workloads across private and public clouds. &nbsp;</p>
+<p>Born out of collaboration between Pivotal, VMware, and Google Cloud, PKS uses the latest stable open source distribution of Kubernetes - with no proprietary extensions. &nbsp;</p>
+<h2>It's a Kubernetes solution your ops team will love</h2>
+<p>The seamless integration between PKS and VMware vSphere makes it a low-friction path to Kubernetes and cloud-native applications for IT teams with heavy investments in VMware and limited open source skills.</p>
+<p>It gives Ops manageability, stability, and security while Dev gets the latest Kubernetes.</p>
+<p>Plus, PKS ensures constant compatibility with Kubernetes versions that are supported by Google Container Engine (GKE), so developers can use the latest Kubernetes features and tools. And workloads are readily portable between vSphere and GKE.</p>
+<p>Built with enterprise containerization in mind, PKS provides developer self-service of Kubernetes at scale. This allows development teams to work in a more agile, empowering environment to accelerate release cycles while easily scaling containers. Once it's set up, developers can do their thing with little intervention from IT.</p>
+<p>PKS gives developers a Kubernetes "dial tone" without the burden of having to configure Kubernetes, provision the underlying infrastructure, or address failures. &nbsp;</p>
+<p>And finally, PKS works with Pivotal Cloud Foundry (PCF) to provide continuous integration and delivery (CI/CD) as well as integrated frameworks for application development. PCF is a complete application development platform that automates CI/CD while supplying developer tools and services.</p>
+<p>Learn more about PKS and how it supports microservices and cloud-native applications in <a href="https://kubernetesonvmware.com/" target="_blank" rel="noopener"><strong>our recent ebook</strong></a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="pivotal-container-service-what-developers-need-to-know.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq9e46.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Pivotal+Container+Service%3A+What+Developers+Need+to+Know&amp;pi=12155634342&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/pivotal-container-service-what-developers-need-to-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:23 GMT -->
+</html>

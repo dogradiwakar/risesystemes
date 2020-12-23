@@ -1,0 +1,229 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/building-cloud-native-applications-with-openshift?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Building Cloud-Native Applications with Red Hat OpenShift</title>
+    <link rel="canonical" href="building-cloud-native-applications-with-openshift.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Red Hat OpenShift allows you to build and deploy cloud-native apps with Kubernetes by providing a complete solution right out of the box.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Building Cloud-Native Applications with Red Hat OpenShift",
+        "datePublished": "2020-01-10T17:00:00Z",
+        "dateModified": "2020-10-02T23:27:58.742Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/building-cloud-native-applications-with-openshift",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_photography/person-coding_1920x1080_redapt_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="building-cloud-native-applications-with-openshift.html">Building Cloud-Native Applications with Red Hat OpenShift</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Jan 10, 2020 5:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>With many enterprises looking to change the way they use technology in response to increasing competition and expectations, accelerating the delivery of high-quality products is critical.</p>
+
+<p>That’s where Red Hat OpenShift comes into play.</p>
+<h2>What sets OpenShift apart</h2>
+<p>Traditional, open-source Kubernetes requires you to assemble and integrate at least 10-15 additional pieces to your development platforms. This not only requires ongoing investment, it requires on-hand experience to get up and running.</p>
+<p><a href="https://content.redapt.com/cloud-native-apps" rel="noopener" target="_blank">Click here to read the complete guide on building cloud native applications.</a></p>
+<p>OpenShift, in contrast, provides you with a complete and working platform right out of the box. With it, you get:</p>
+<ul>
+<li>Management tools like Prometheus and operational lifecycle management.</li>
+<li>Developer tools like CI/CD pipelines and an embedded container registry.</li>
+<li>Support from the world-class Red Hat engineering team.</li>
+</ul>
+<h2><strong><amp-img src="../hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1be6a.jpg?width=1200&amp;name=team-meeting_wide-photo_redapt_1.jpg" alt="team-meeting_wide-photo_redapt_1" width="1200.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=600&amp;name=team-meeting_wide-photo_redapt_1.jpg 600w, https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=1200&amp;name=team-meeting_wide-photo_redapt_1.jpg 1200w, https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=1800&amp;name=team-meeting_wide-photo_redapt_1.jpg 1800w, https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=2400&amp;name=team-meeting_wide-photo_redapt_1.jpg 2400w, https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=3000&amp;name=team-meeting_wide-photo_redapt_1.jpg 3000w, https://www.redapt.com/hs-fs/hubfs/_photography/team-meeting_wide-photo_redapt_1.jpg?width=3600&amp;name=team-meeting_wide-photo_redapt_1.jpg 3600w" height="288.0" layout="responsive"></amp-img></strong></h2>
+<h2><strong>What OpenShift can do for your enterprise</strong></h2>
+<p>If the name of the game is acceleration, OpenShift excels at knocking down doors between your development team and deployments. Here are some things it can help you do:</p>
+<ul>
+<li>Remove dependencies that slow down the development process by efficiently adopting and managing Kubernetes.</li>
+<li>Prevent downtime by moving deployment to smaller and incremental releases.</li>
+<li>Reduce latency by defining rules to automatically scale resources during peak times.</li>
+</ul>
+<div>
+  <amp-img class="vidyard-player-embed" src="../../cdn.vidyard.com/thumbnails/LGvTbYC8pnaHNlVMOsYHcA/1e9c0b7e0978e8c597f458.jpg" width="1920" height="1080" alt="2020.01_clip02_blog-video_paul-w" layout="responsive"></amp-img>
+
+</div>
+
+<h2><strong>What you should ask before choosing OpenShift</strong></h2>
+<p>When it comes to the choice between adopting traditional open-source Kubernetes and going with OpenShift, ask yourself:</p>
+<ul>
+<li>Do you have the engineering skill sets to build your own platform? If not, OpenShift has everything you need right out of the box.</li>
+<li>Do you need help to support production issues? If so, Red Hat provides the technical support safety net when you need it.</li>
+<li>Will you be multi-cloud now or in the future? If so, OpenShift runs on all platforms. In addition, it provides your developers and ops teams with the same software stack and user experience across all providers.</li>
+</ul>
+<p>Need help in adopting a cloud-native approach for your development? Download our free eBook, <em><a href="https://content.redapt.com/red-hat-openshift-ebook" rel="noopener" target="_blank">Build More Applications, Faster</a></em>&nbsp;to learn how OpenShift can help you be more competitive.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="building-cloud-native-applications-with-openshift.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq48e2.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Building+Cloud-Native+Applications+with+Red+Hat+OpenShift&amp;pi=24174678030&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/building-cloud-native-applications-with-openshift?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:07 GMT -->
+</html>

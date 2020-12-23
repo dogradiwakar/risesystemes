@@ -1,0 +1,215 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/pivotal-container-service-what-it-operations-needs-to-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Pivotal Container Service: What Operations Needs to Know</title>
+    <link rel="canonical" href="pivotal-container-service-what-it-operations-needs-to-know.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="PKS has some compelling features for IT operations teams. Here, we will highlight some key features of PKS from the operational perspective.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Pivotal Container Service: What Operations Needs to Know",
+        "datePublished": "2018-09-12T00:00:00Z",
+        "dateModified": "2020-08-31T21:13:32.732Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/pivotal-container-service-what-it-operations-needs-to-know",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/5bbce326eea8156cccc00161_RDPT-049002_Blog_5_What_Ops_Needs_To_KNow.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="pivotal-container-service-what-it-operations-needs-to-know.html">Pivotal Container Service: What Operations Needs to Know</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Sep 12, 2018 12:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Pivotal Container Service (PKS) has some compelling features for application developers, as we catalogued in <a href="pivotal-container-service-what-developers-need-to-know.html"><strong>a recent post</strong>.</a> But what about the IT operations team?</p>
+<p>Here, we'll highlight some key features of PKS from the operational perspective.</p>
+
+<h2><strong>First, the basics: What is PKS?</strong></h2>
+<p>PKS is a commercially supported release of the open source Kubo project that provides a simple way to deploy and operate enterprise-grade Kubernetes. With PKS, you can reliably deploy and run containerized workloads across private and public clouds. &nbsp;</p>
+<h2><strong>It's enterprise-grade Kubernetes for VMware-based environments</strong></h2>
+<p>The lack of open source expertise has been a common barrier to adopting Kubernetes and containers for enterprises with legacy infrastructure. That barrier is eliminated with PKS. Its seamless integration with VMware vSphere makes it a low-friction path to Kubernetes operated within the manageable, stable, and secure VMware environment that already exists.</p>
+<h2><strong>Think of it as buying the Kubernetes car, not the parts</strong></h2>
+<p>The oft-used analogy for pre-integrated solutions holds true here. With PKS, you're getting enterprise-grade Kubernetes that's built by Pivotal and Google and backed by their combined strength. It saves IT teams from the challenge and risk of assembling a DIY Kubernetes solution from sundry open source technologies.</p>
+<h2><strong>PKS is built for Day 2 operations</strong></h2>
+<p>Pivotal bills PKS as being "built for Day 2 operations." Built-in high availability, monitoring, automated health checks, and other features ease the burden of Day 2 operations for container orchestration while enabling you to reliably deploy and run your containerized workloads across private and public clouds.</p>
+<h2><strong>BOSH simplifies lifecycle management of Kubernetes</strong></h2>
+<p>Built into PKS, BOSH is an open source tool for release engineering that simplifies the deployment and lifecycle management of large distributed systems. Once the use case for managing Kubernetes clusters was identified, Pivotal and Google worked together through the Kubo project to integrate BOSH with Kubernetes. The benefit to the operations team is an added layer of automation and resilience in the container environment.</p>
+<h2><strong>NSX-T simplifies container networking and security</strong></h2>
+<p>PKS also includes NSX-T, which adds high availability, automated provisioning, micro-segmentation, ingress controller, load balancing, and security policy to your container environment. Essentially, it simplifies container networking and security as you scale with PKS. &nbsp;</p>
+<h2>Out-of-box integrations boost operational efficiencies&nbsp;</h2>
+<p>PKS integrates with Wavefront by VMware and vRealize Log Insight out of the box. Wavefront provides real-time visibility into the operations and performance of containerized applications running in Kubernetes clusters. Meanwhile, vRealize Log Insight delivers highly scalable log management with actionable dashboards, analytics, and broad third-party extensibility. All of this contributes to greater operational efficiency in your container environment.</p>
+<h2><strong>PKS is multi-cloud ready</strong></h2>
+<p>With PKS, operations teams have the flexibility to deploy and consume Kubernetes on-premises with VMware vSphere or in the public cloud, always with a reliable and consistent experience across all clouds. It's Kubernetes on your operational terms.</p>
+<p>Learn more about how PKS provides a low-friction path to enterprise-grade Kubernetes and cloud-native apps in <a href="https://kubernetesonvmware.com/" target="_blank" rel="noopener"><strong>our latest ebook</strong></a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="pivotal-container-service-what-it-operations-needs-to-know.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqa4ad.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Pivotal+Container+Service%3A+What+Operations+Needs+to+Know&amp;pi=12155634345&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/pivotal-container-service-what-it-operations-needs-to-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:23 GMT -->
+</html>

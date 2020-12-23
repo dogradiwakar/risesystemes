@@ -1,0 +1,226 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/how-to-orchestrate-and-monitor-container-and-microservices-environments?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>How to Orchestrate and Monitor Containers and Microservices</title>
+    <link rel="canonical" href="how-to-orchestrate-and-monitor-container-and-microservices-environments.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="There’s a process for an enterprise to orchestrate and monitor their container and microservices environments. Here’s what it can look like:">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Orchestrate and Monitor Containers and Microservices",
+        "datePublished": "2019-11-14T17:00:00Z",
+        "dateModified": "2020-08-31T18:51:39.805Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/how-to-orchestrate-and-monitor-container-and-microservices-environments",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_other-graphics/redapt_blog_microservices-container.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="how-to-orchestrate-and-monitor-container-and-microservices-environments.html">How to Orchestrate and Monitor Containers and Microservices</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Nov 14, 2019 5:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>It used to be that working on monolithic applications was a tedious process, vulnerable to catastrophic crashes that made an entire application inoperable for an extended period of time.</p>
+
+<p>It also made the actual <em>work</em> of developing an application slow and plodding, with limited deployments and the need for never-ending communication between teams.</p>
+<p>Then <a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">microservices</a> and containers arrived, and with them the ability to break an application into separate components. Each of these parts are independent of each other, which greatly speeds up development since developers are no longer waiting on other developers just to move their part of a project forward.</p>
+<p>In addition,<strong> separating an application into multiple components builds resilience</strong>. If one part of the application were to fail, the entire application doesn’t fail with it.</p>
+<p><a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">Read Now: The Complete Guide to Microservices Architecture for Enterprises</a></p>
+<p>As much as this approach has simplified the development process, it’s not without its own complications.</p>
+<p>Eventually, an enterprise using microservices architecture and containers is going to scale to the point where juggling hundreds — even thousands — of containers is untenable both from a resource and budget perspective.</p>
+<p>Thankfully, there’s a process for an enterprise to orchestrate and monitor their environments. Here’s what it can look like:</p>
+<h2><strong>Step 1: Utilize Kubernetes</strong></h2>
+<p>Developed by the minds at Google, <a href="introduction-to-kubernetes-and-its-infrastructure.html" rel="noopener" target="_blank">Kubernetes</a> acts as a conductor for all the containers used in development.</p>
+<p>In a nutshell, Kubernetes gathers a large number of containers into a cluster and ensures they play well with each other. This also makes monitoring those containers easier as there’s just one cluster to pay attention to at a time.</p>
+<h2><strong>Step 2: Deploy a Kubernetes Manager</strong></h2>
+<p>Just like with containers, as an enterprise grows, so does the number of clusters. This is where a Kubernetes manager such as <a href="https://rancher.com/" rel="noopener" target="_blank">Rancher</a> comes in.</p>
+<p>Continuing with the orchestration theme, tools like Rancher act as the conductor of Kubernetes by monitoring all of the clusters holding containers.</p>
+<h2><strong>Step 3: Manage Your Kubernetes Manager</strong></h2>
+<p><strong><amp-img src="../hs-fs/hubfs/2019.11/redapt_blog_automation8b20.jpg?width=1000&amp;name=redapt_blog_automation.jpg" alt="redapt_blog_automation" width="1000.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=500&amp;name=redapt_blog_automation.jpg 500w, https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=1000&amp;name=redapt_blog_automation.jpg 1000w, https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=1500&amp;name=redapt_blog_automation.jpg 1500w, https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=2000&amp;name=redapt_blog_automation.jpg 2000w, https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=2500&amp;name=redapt_blog_automation.jpg 2500w, https://www.redapt.com/hs-fs/hubfs/2019.11/redapt_blog_automation.jpg?width=3000&amp;name=redapt_blog_automation.jpg 3000w" height="228.0" layout="responsive"></amp-img></strong></p>
+<p>Eventually, even a tool like Rancher will need to be maintained and upgraded as new abilities and security patches arrive. Thankfully, there are automation tools available to make this happen without downtime for containers.</p>
+<p>Two of the more popular ones are <a href="https://www.terraform.io/" rel="noopener" target="_blank">Terraform</a> and <a href="https://www.ansible.com/" rel="noopener" target="_blank">Ansible</a>, which can be used together to automatically manage and monitor Rancher and configure virtual machines, respectively.</p>
+<h2><strong>Step 4: Break Stuff</strong></h2>
+<p>Now that our tech stack is in place, it’s time to test its resiliency. That’s where something like <a href="https://netflix.github.io/chaosmonkey/" rel="noopener" target="_blank">Chaos Monkey</a> is useful.</p>
+<p>Developed by Netflix, Chaos Monkey is designed to wreak havoc on containers by randomly selecting some of them for destruction at any given time. This not only tests the ability of an application to recover during a failure, it also exposes potential weaknesses in how automation tools are deployed.</p>
+<p>Put another way, it’s like firefighters creating a controlled burn to ward off potential large-scale fires and test containment times all at once.</p>
+<h2><strong>Step 5: Keep an Eye on Things</strong></h2>
+<p>With a tech stack in place and a tool like Chaos Monkey running wild, it’s time to overlay a monitoring solution to ensure containers stay up and running.</p>
+<p>For this, you want to deploy something like <a href="https://prometheus.io/" rel="noopener" target="_blank">Prometheus</a>, an open-source monitoring service that provides you with powerful metrics and precision alerts for when failures occur.</p>
+<h2><strong>This is just one possible solution</strong></h2>
+<p>In the end, how an enterprise builds, orchestrates, and monitors a container and microservices environment will depend on their specific needs and capabilities.</p>
+<p>But regardless of whether they do the work in-house or with a partner, the benefits of embracing microservices and containers — and a <a href="../capabilities/business-transformation/devops-enablement.html" rel="noopener" target="_blank">DevOps culture</a> as a whole — are well worth the effort.</p>
+<p>For more information on microservices and containers, download our free eBook: <a href="https://content.redapt.com/applying-the-technical-maturity-framework-when-going-cloud-native-ebook" rel="noopener" target="_blank"><em>3 Simple Steps to Applying the Technical Maturity Framework When Going Cloud-Native</em></a>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="how-to-orchestrate-and-monitor-container-and-microservices-environments.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqbb96.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=How+to+Orchestrate+and+Monitor+Containers+and+Microservices&amp;pi=20666796293&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/how-to-orchestrate-and-monitor-container-and-microservices-environments?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:22 GMT -->
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/kubernetes-101-for-busy-it-executives?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Kubernetes 101 for Busy IT Executives</title>
+    <link rel="canonical" href="kubernetes-101-for-busy-it-executives.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Considering container-based architecture to make more efficient use of your server&#39;s infrastructure? Here&#39;s a &quot;cheat sheet&quot; on what Kubernetes has to offer.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Kubernetes 101 for Busy IT Executives",
+        "datePublished": "2018-11-01T08:00:00Z",
+        "dateModified": "2020-08-31T21:02:52.137Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/kubernetes-101-for-busy-it-executives",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/5bdb466a121eaa3f3224cc0f_RDPT-049002_Blog_10_KUBERNETES2010120FOR20BUSY20IT20EXECUTIVES20-20header20image.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="kubernetes-101-for-busy-it-executives.html">Kubernetes 101 for Busy IT Executives</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Nov 1, 2018 8:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p><a href="7-key-steps-on-the-road-to-cloud-native-applications.html">In a previous blog post</a>, we highlighted how the rising use of containers has revolutionized the way software is developed and deployed. In this post, we offer a "cheat sheet" on Kubernetes for IT leaders who are considering container-based architecture.</p>
+
+<h2><strong>Introduction to Containers</strong></h2>
+<p>Application containers allow developers to package an application and its underlying dependencies into a lightweight container that can run anywhere, bringing speed, flexibility, and efficiency to modern development practices.</p>
+<p>Drawing on the resources of the host operating system, <a href="https://www.cio.com/article/2924995/software/what-are-containers-and-why-do-you-need-them.html" target="_blank" rel="noopener">containers make highly efficient use</a> of the underlying server infrastructure and allow enterprises to ramp up application instances quickly to match spikes in demand.</p>
+<p>Hundreds of containers deployed across multiple hosts introduce the need for container orchestration. That's where <a href="introduction-to-kubernetes-and-its-infrastructure.html" rel="noopener" target="_blank">Kubernetes</a> comes in.</p>
+<p>Often abbreviated to K8s, Kubernetes automates the deployment, scaling, maintenance, scheduling and operation of multi-container applications. Put simply, Kubernetes makes managing containers simpler.</p>
+<h2><strong>A New Standard for Container Orchestration </strong></h2>
+<p>Originally developed by Google and now maintained by the <a href="https://www.cncf.io/" rel="noopener" target="_blank">Cloud Native Computing Foundation (CNCF)</a>, Kubernetes has quickly risen to become the standard for container orchestration.</p>
+<p>It has been incorporated into Docker — the leader in containerization technology. Leading vendors such as AWS, Azure, Cisco, IBM, <a href="../partners/google-cloud.html" rel="noopener" target="_blank">Google Cloud</a>, and VMware have rushed to support K8s and the CNCF. <a href="5-companies-that-are-winning-big-with-cloud-native.html">Many well-known companies</a> are already using Kubernetes for container management.</p>
+<p>Kubernetes arrived on the scene just as DevOps, Agile, and digital transformation were taking flight. These were organizational and process changes that align perfectly with <a href="https://content.redapt.com/cloud-native-apps" rel="noopener" target="_blank">cloud-native application</a> development practices.</p>
+<p>Because Kubernetes is application-centric, it allows teams to quickly build cloud-native applications that can run on any infrastructure - public cloud, private cloud, hybrid cloud, and bare-metal on-prem.</p>
+<h2><strong>IT + Business Strategy</strong></h2>
+<p>Kubernetes puts IT at the helm of business strategy by providing a fast path to improved developer productivity and the opportunity for an enterprise to remain relevant in a market increasingly defined by digital experiences and the cloud.</p>
+<p>It makes a container-based architecture feasible and less resource-intensive while helping enterprises realize more ROI from cloud and hardware investments.</p>
+<p>Kubernetes is certainly creating a buzz in the developer community, but it comes with a steep learning curve. It's made up of multiple components and it can be difficult to ascertain which ones are relevant for your IT landscape.</p>
+<p>If you are new to the world of container orchestration, aligning your development team around the <a href="https://content.pivotal.io/blog/beyond-the-twelve-factor-app">12 Factor App methodology</a> is an excellent foundation for designing software to run in an environment like Kubernetes.</p>
+<h2><strong>Getting started with Kubernetes</strong></h2>
+<p>For IT leaders looking to reap the benefits of Kubernetes adoption, Pivotal Container Service (PKS) is a simple way to deploy and operate production-ready Kubernetes on VMware vSphere and Google Cloud Platform.</p>
+<p>Redapt is one of just a handful of systems integrators with the capabilities to deliver a PKS solution. If you're interested, <a href="https://kubernetesonvmware.com/"><strong>start with a Kubernetes readiness assessment</strong></a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="kubernetes-101-for-busy-it-executives.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq5f0a.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Kubernetes+101+for+Busy+IT+Executives&amp;pi=12155634284&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/kubernetes-101-for-busy-it-executives?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:11 GMT -->
+</html>

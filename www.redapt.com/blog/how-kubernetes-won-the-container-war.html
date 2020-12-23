@@ -1,0 +1,975 @@
+<!-- start coded_template: id:14370198209 path:Redapt 2019/templates/Redapt 2019 Blog Post.html --><!doctype html><html>
+<!-- Mirrored from www.redapt.com/blog/how-kubernetes-won-the-container-war by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:37:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <title>How Kubernetes Won the Container War</title>
+        <meta name="description" content="Our thoughts on the 2019 CNCF Survey that explains where things are, and where they are going, in cloud-native computing.">
+        
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+    <meta property="og:description" content="Our thoughts on the 2019 CNCF Survey that explains where things are, and where they are going, in cloud-native computing.">
+    <meta property="og:title" content="How Kubernetes Won the Container War">
+    <meta name="twitter:description" content="Our thoughts on the 2019 CNCF Survey that explains where things are, and where they are going, in cloud-native computing.">
+    <meta name="twitter:title" content="How Kubernetes Won the Container War">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+    
+
+    
+<!--  Added by GoogleAnalytics integration -->
+<script>
+var _hsp = window._hsp = window._hsp || [];
+_hsp.push(['addPrivacyConsentListener', function(consent) { if (consent.allowed || (consent.categories && consent.categories.analytics)) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-2098698-1','auto');
+  ga('send','pageview');
+}}]);
+</script>
+
+<!-- /Added by GoogleAnalytics integration -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZHQHWX');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Hotjar Tracking Code for https://www.redapt.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1558168,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<link rel="amphtml" href="how-kubernetes-won-the-container-war3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.redapt.com/hubfs/_illustrations/kubernetes-header.jpg#keepProtocol">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:image" content="https://www.redapt.com/hubfs/_illustrations/kubernetes-header.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.redapt.com/blog/how-kubernetes-won-the-container-war">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="how-kubernetes-won-the-container-war.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.redapt.com">
+<meta name="twitter:site" content="@redapt">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+        <!-- start coded_template: id:12320017130 path:Redapt 2019/sections/headtags.html -->
+<link rel="stylesheet" href="../../use.typekit.net/wrm2ixr.css">
+<link rel="stylesheet" type="text/css" href="../../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
+
+<script src="../hs-fs/hub/6151115/hub_generated/template_assets/12780961281/1605671874212/Redapt_2019/js/page.js"></script>
+
+<link href="../hs-fs/hub/6151115/hub_generated/template_assets/12320014649/1605038947304/Redapt_2019/css/style.min.css" rel="stylesheet" type="text/css">
+
+<link href="../../cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css" rel="stylesheet" type="text/css"><!-- end coded_template: id:12320017130 path:Redapt 2019/sections/headtags.html -->
+
+      
+    <meta name="generator" content="HubSpot"></head>
+    <body class="front-page blog-post   hs-content-id-27352027874 hs-blog-post hs-blog-id-11355233533">
+<div style="display:none;position:absolute;visibility:hidden;">
+
+</div>
+<div id="wrap">
+<!-- start coded_template: id:12781432891 path:Redapt 2019/sections/header.html -->
+<div id="header"><div class="wrap">
+    <div class="logo"><a href="../index.html"><img src="../hubfs/Redapt%202019/logo.svg" alt="redapt"></a></div>
+    <div id="nav">
+      
+      
+      
+      <ul>
+      
+        <li class=" capabilities"><a href="../capabilities.html">Capabilities</a>
+          
+          <ul>
+            <li class="overview"><a href="../capabilities.html">Capabilities Home</a></li>
+            
+              <li><a href="../capabilities/infrastructure.html">Infrastructure</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/infrastructure/data-center-infrastructure.html">Data Center Infrastructure</a></li>
+                  
+                    <li><a href="../capabilities/infrastructure/advanced-engineering-services.html">Advanced Engineering Services</a></li>
+                  
+                    <li><a href="../capabilities/rack-integration.html">Rack Integration</a></li>
+                  
+                    <li><a href="../capabilities/infrastructure/global-logistics.html">Global Logistics</a></li>
+                  
+                    <li><a href="../capabilities/infrastructure/it-asset-disposition.html">IT Asset Disposition</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/operations.html">Operations</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/operations/devops-automation.html">DevOps Automation</a></li>
+                  
+                    <li><a href="../capabilities/operations/site-operations.html">Site Operations</a></li>
+                  
+                    <li><a href="../capabilities/operations/modern-datacenter.html">Modern Datacenter</a></li>
+                  
+                    <li><a href="../capabilities/operations/managed-services.html">Managed Services</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/cloud-engineering.html">Cloud Engineering</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/cloud-engineering/public-cloud-implementation.html">Public Cloud Implementation</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/hybrid-cloud-implementation.html">Hybrid Cloud Implementation</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/app-data-migration.html">App &amp; Data Migration</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/emerging-technology-integration.html">Emerging Technology Integration</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/business-transformation.html">Business Transformation</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/business-transformation/cloud-native-apps.html">Cloud Native Apps</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/advanced-data-and-analytics.html">Advanced Data &amp; Analytics</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/artificial-intelligence.html">Artificial Intelligence</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/devops-enablement.html">DevOps Enablement</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/iot-and-edge-solutions.html">IoT &amp; Edge Solutions</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" results"><a href="../results.html">Results</a>
+          
+      </li>
+      
+        <li class="menu-ancestor  insights"><a href="../insights.html">Insights</a>
+          
+          <ul>
+            <li class="overview"><a href="../insights.html">Insights Home</a></li>
+            
+              <li><a href="../blog.html">Blog</a>
+                
+            </li>
+            
+              <li><a href="../events.html">Events</a>
+                
+            </li>
+            
+              <li><a href="../insights/resources.html">Resources</a>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" partners"><a href="../partners.html">Partners</a>
+          
+      </li>
+      
+        <li class=" careers"><a href="../careers.html">Careers</a>
+          
+          <ul>
+            <li class="overview"><a href="../careers.html">Careers Home</a></li>
+            
+              <li><a href="../careers/openings.html">Openings</a>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" about"><a href="../about.html">About</a>
+          
+          <ul>
+            <li class="overview"><a href="../about.html">About Home</a></li>
+            
+              <li><a href="../newsroom.html">Newsroom</a>
+                
+            </li>
+            
+              <li><a href="../about/leadership.html">Leadership</a>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" contact"><a href="../contact.html">Contact</a>
+          
+      </li>
+      
+        
+    </ul> 
+    </div>
+    <div class="secondary">
+      <div class="toggle search" data-toggle-class="search-on"><span class="icon fa fa-search"></span> <span class="label">Search</span></div>
+      <a href="../contact.html" class="button contact">Contact</a>
+    </div>
+    <div class="links">
+        <a href="../contact.html" class="button contact">Contact</a>
+        <a href="https://forge.redapt.com/">Portal Login</a>
+    </div>
+    
+    <div id="nav-toggle" class="toggle nav" data-toggle-class="menu-on"><div class="bar"></div></div>
+
+    <form class="search" method="get" action="https://www.redapt.com/hs-search-results">
+        <input type="text" name="term" class="query" placeholder="Search">
+        <button type="submit"><span class="icon fa fa-search"></span></button>
+    </form>
+
+</div></div><!-- end coded_template: id:12781432891 path:Redapt 2019/sections/header.html -->
+
+<div class="main-content"><div class="wrap">
+          
+<!-- start coded_template: id:14370194518 path:Redapt 2019/sections/blog/banner.html -->
+    
+
+  
+
+<div class="theme-block full-width blog-header" style="background-image:url(../../cdn2.hubspot.net/hub/6151115/hubfs/_illustrations/kubernetes-header6669.jpg?length=1600&amp;name=kubernetes-header.jpg);"><div class="wrap">
+    
+    
+<div class="block-content">
+  <div class="subtitle"><a href="../insights.html">Insights</a> &gt; Blog</div>
+  <h1><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">How Kubernetes Won the Container War</span></h1>
+  
+  <p>By Cloud-Native Engineering Team | Posted on March 26, 2020  
+  
+  | Posted in 
+      
+      <a href="tag/cloud-native.html">Cloud Native</a>, 
+      
+      <a href="tag/devops.html">DevOps</a>, 
+      
+      <a href="tag/kubernetes.html">Kubernetes</a> 
+    
+  
+</p>
+    
+</div>
+<!-- start coded_template: id:14370194685 path:Redapt 2019/sections/blog/share.html -->
+<div class="share">
+    <div class="label">Share</div>
+    <ul>
+    <li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war&amp;via=redapt&amp;text=How+Kubernetes+Won+the+Container+War"><span class="icon fa fa-twitter"></span></a></li>
+    <li><a href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war"><span class="icon fa fa-facebook"></span></a></li>
+    <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war&amp;title=How+Kubernetes+Won+the+Container+War"><span class="icon fa fa-linkedin"></span></a></li>
+    </ul>
+</div><!-- end coded_template: id:14370194685 path:Redapt 2019/sections/blog/share.html -->
+
+   
+    
+</div></div><!-- end coded_template: id:14370194518 path:Redapt 2019/sections/blog/banner.html -->
+
+
+
+<div class="blog-content has-sidebar"><div class="wrap">
+    
+  
+<div class="main-content">
+  <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p>Earlier this month, the Cloud Native Computing Foundation (CNCF) released the results of its <a href="https://www.cncf.io/blog/2020/03/04/2019-cncf-survey-results-are-here-deployments-are-growing-in-size-and-speed-as-cloud-native-adoption-becomes-mainstream/" rel="noopener" target="_blank">CNCF Survey for 2019</a>. Some of those results included:</p>
+<!--more-->
+<ul>
+<li><strong>Containers dominate development</strong>, hitting 84% usage in production.</li>
+<li>18% of respondents are currently using service mesh in production, and an additional 47% are looking into it.</li>
+<li>The maturity of CI/CD tools has <strong>increased daily release cycles 12%</strong> and weekly cycles by 8% over the year prior.</li>
+</ul>
+<p>The CNCF Survey also confirms what we’ve known for some time, which is that <strong>Kubernetes has won the container war</strong>. In fact, most companies that have been on the adoption journey for a while are now in production and continue to expand, as shown by the number of machines, clusters, and containers in usage.</p>
+<p style="text-align: center;"><a href="https://content.redapt.com/cloud-native-apps" rel="noopener" target="_blank">Click here to read the complete guide on building cloud native applications.</a></p>
+<p>On the platform front, 38% of respondents to the survey have a hybrid deployment model spanning providers to increase availability and reduce vendor lock-in—an agnostic approach that is increasingly enticing for enterprises.</p>
+<h2><strong>Digging deeper</strong></h2>
+<p>Extrapolating from the trends in the CNCF Survey, here are seven things we believe will be coming next:</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/multiple-appsb3c5.jpg?width=81&amp;name=multiple-apps.jpg" alt="multiple-apps" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=41&amp;name=multiple-apps.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=81&amp;name=multiple-apps.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=122&amp;name=multiple-apps.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=162&amp;name=multiple-apps.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=203&amp;name=multiple-apps.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/multiple-apps.jpg?width=243&amp;name=multiple-apps.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">1. Advanced workloads </strong></h3>
+<p>Many companies will move beyond the basics of how to install and run Kubernetes into more advanced workloads.</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/download-with-check8cf0.jpg?width=81&amp;name=download-with-check.jpg" alt="download-with-check" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=41&amp;name=download-with-check.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=81&amp;name=download-with-check.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=122&amp;name=download-with-check.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=162&amp;name=download-with-check.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=203&amp;name=download-with-check.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/download-with-check.jpg?width=243&amp;name=download-with-check.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">2. Continued adoption</strong></h3>
+<p>Adoption of DevOps and SRE tools and processes will only continue to grow, as will the benefits of increased development velocity.</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/app-with-plus6376.jpg?width=81&amp;name=app-with-plus.jpg" alt="app-with-plus" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=41&amp;name=app-with-plus.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=81&amp;name=app-with-plus.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=122&amp;name=app-with-plus.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=162&amp;name=app-with-plus.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=203&amp;name=app-with-plus.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-plus.jpg?width=243&amp;name=app-with-plus.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">3. New types of apps</strong></h3>
+<p>While the majority of apps running in Kubernetes today are web and service architectures, we expect to see a focus on new types of apps in the next wave of workloads, such as:</p>
+<ul>
+<li>Microservices supported by a service mesh</li>
+<li>Batch processing</li>
+<li>Machine learning at scale</li>
+<li>IoT stream processing</li>
+</ul>
+<h3><strong><img src="../hs-fs/hubfs/_icons/data-magnifying-glass4e90.jpg?width=81&amp;name=data-magnifying-glass.jpg" alt="data-magnifying-glass" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=41&amp;name=data-magnifying-glass.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=81&amp;name=data-magnifying-glass.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=122&amp;name=data-magnifying-glass.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=162&amp;name=data-magnifying-glass.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=203&amp;name=data-magnifying-glass.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/data-magnifying-glass.jpg?width=243&amp;name=data-magnifying-glass.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">4. Focus on observability</strong></h3>
+<p>Observability will be an important focus going forward as enterprises look to better understand and troubleshoot workloads, as well as tie metrics back to business drivers.</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/kubernetes-with-arrow6367.jpg?width=81&amp;name=kubernetes-with-arrow.jpg" alt="kubernetes-with-arrow" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=41&amp;name=kubernetes-with-arrow.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=81&amp;name=kubernetes-with-arrow.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=122&amp;name=kubernetes-with-arrow.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=162&amp;name=kubernetes-with-arrow.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=203&amp;name=kubernetes-with-arrow.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/kubernetes-with-arrow.jpg?width=243&amp;name=kubernetes-with-arrow.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">5. More movement to Kubernetes</strong></h3>
+<p>As storage options mature and expand, more stateful applications will move to Kubernetes.</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/app-with-checks30fa.jpg?width=81&amp;name=app-with-checks.jpg" alt="app-with-checks" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=41&amp;name=app-with-checks.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=81&amp;name=app-with-checks.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=122&amp;name=app-with-checks.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=162&amp;name=app-with-checks.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=203&amp;name=app-with-checks.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/app-with-checks.jpg?width=243&amp;name=app-with-checks.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">6. Easier deployment</strong></h3>
+<p>New tools and architecture will make it much easier to deploy apps across multiple, independent clusters.</p>
+<h3><strong><img src="../hs-fs/hubfs/_icons/cloud-and-buildingf94e.jpg?width=81&amp;name=cloud-and-building.jpg" alt="cloud-and-building" width="81" style="width: 81px; float: left; margin: 0px 10px 10px 0px;" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=41&amp;name=cloud-and-building.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=81&amp;name=cloud-and-building.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=122&amp;name=cloud-and-building.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=162&amp;name=cloud-and-building.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=203&amp;name=cloud-and-building.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/cloud-and-building.jpg?width=243&amp;name=cloud-and-building.jpg 243w" sizes="(max-width: 81px) 100vw, 81px">7. Increased hybrid usage</strong></h3>
+<p>Using a combination of cloud and private datacenter providers—also known as hybrid—will become the standard, especially with large enterprises that want to maintain control and minimize vendor lock-in.</p>
+<p>These are just some of the trends we see in the coming year. Check back in with <a href="https://www.cncf.io/" rel="noopener" target="_blank">CNCF</a> for their 2020 results to see how well we did with our predictions.</p>
+<p>To learn more about Kubernetes, containers, and any other enterprise technology questions you may have, <a href="../contact.html" rel="noopener" target="_blank">contact one of our experts</a>. You can also read our <a href="https://content.redapt.com/cloud-native-solutions" rel=" noopener">free guide to developing cloud-native applications here</a>.</p></span>    
+  
+<div class="meta-bottom">
+<!-- start coded_template: id:14370194685 path:Redapt 2019/sections/blog/share.html -->
+<div class="share">
+    <div class="label">Share</div>
+    <ul>
+    <li><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war&amp;via=redapt&amp;text=How+Kubernetes+Won+the+Container+War"><span class="icon fa fa-twitter"></span></a></li>
+    <li><a href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war"><span class="icon fa fa-facebook"></span></a></li>
+    <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.redapt.com%2Fblog%2Fhow-kubernetes-won-the-container-war&amp;title=How+Kubernetes+Won+the+Container+War"><span class="icon fa fa-linkedin"></span></a></li>
+    </ul>
+</div><!-- end coded_template: id:14370194685 path:Redapt 2019/sections/blog/share.html -->
+
+  <p class="more">
+   <a href="../insights/index.html"><span class="icon fa fa-angle-left"></span> Back to Insights</a>
+  </p>
+</div>
+
+  
+  
+  
+</div><div class="sidebar-content">
+
+  <!-- start coded_template: id:14370195095 path:Redapt 2019/sections/blog/widget signup.html -->
+<div class="widget signup"><div class="inner">
+<h3>Keep up with Redapt</h3>
+
+<span id="hs_cos_wrapper_my_form" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_my_form_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+
+<div id="hs_form_target_my_form"></div>
+
+
+
+
+
+
+
+
+
+</span>
+
+</div></div><!-- end coded_template: id:14370195095 path:Redapt 2019/sections/blog/widget signup.html -->
+
+  <!-- start coded_template: id:14370195192 path:Redapt 2019/sections/blog/widget-topics.html -->
+<div class="widget archive topics">
+  <div class="block">
+  <h3>Categories</h3>
+  <div class="widget-module">
+    <ul>
+      
+        <li>
+          <a href="tag/enterprise-infrastructure.html">Enterprise Infrastructure <span class="filter-link-count" dir="ltr">(70)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/cloud-adoption.html">Cloud Adoption <span class="filter-link-count" dir="ltr">(49)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/data-analytics.html">Data &amp; Analytics <span class="filter-link-count" dir="ltr">(49)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/ai-ml.html">AI/ML <span class="filter-link-count" dir="ltr">(45)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/featured.html">Featured <span class="filter-link-count" dir="ltr">(40)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/devops.html">DevOps <span class="filter-link-count" dir="ltr">(29)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/cloud-native.html">Cloud Native <span class="filter-link-count" dir="ltr">(28)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/workplace-modernization.html">Workplace Modernization <span class="filter-link-count" dir="ltr">(25)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/kubernetes.html">Kubernetes <span class="filter-link-count" dir="ltr">(23)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/code-development.html">Code Development <span class="filter-link-count" dir="ltr">(22)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/multi-cloud-operations.html">Multi-Cloud Operations <span class="filter-link-count" dir="ltr">(19)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/google-cloud-platform-gcp.html">Google Cloud Platform (GCP) <span class="filter-link-count" dir="ltr">(16)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/security-governance.html">Security &amp; Governance <span class="filter-link-count" dir="ltr">(16)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/tech-we-like.html">Tech We Like <span class="filter-link-count" dir="ltr">(14)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/dell-emc.html">Dell EMC <span class="filter-link-count" dir="ltr">(10)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/managed-services.html">Managed Services <span class="filter-link-count" dir="ltr">(10)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/iot-and-edge.html">IoT and Edge <span class="filter-link-count" dir="ltr">(9)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/digital-transformation.html">Business Transformation <span class="filter-link-count" dir="ltr">(8)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/events.html">Events <span class="filter-link-count" dir="ltr">(5)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/microsoft-azure.html">Microsoft Azure <span class="filter-link-count" dir="ltr">(4)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/operations.html">Operations <span class="filter-link-count" dir="ltr">(4)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/emerging-tech.html">Emerging Tech <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/news.html">News <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li>
+          <a href="tag/rancher.html">Rancher <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+    </ul>
+    
+  </div>
+</div>
+
+
+</div><!-- end coded_template: id:14370195192 path:Redapt 2019/sections/blog/widget-topics.html -->
+ 
+  
+</div>
+
+
+  
+</div></div>        
+<div class="main-content">
+  <span id="hs_cos_wrapper_post_bottom" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+</div>    
+<!-- start coded_template: id:14372386500 path:Redapt 2019/sections/blog/related.html -->
+
+
+
+
+
+
+
+<div class="theme-block related">
+   <h2>Related Resources</h2>
+  
+<div class="posts-archive posts">
+  
+  
+<!-- start coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+<div class="hentry post">
+
+  <a href="10-ways-pivotal-container-service-simplifies-kubernetes-for-vmware-shops.html" class="thumbnail"><img src="../../cdn2.hubspot.net/hub/6151115/hubfs/Imported_Blog_Media/5b5f47956abb67b274375264_RDPT-049002_Blog_3_Simplifying_Kube-12a34c.jpg?height=400&amp;name=5b5f47956abb67b274375264_RDPT-049002_Blog_3_Simplifying_Kube-12.jpg"></a>
+
+  <div class="subtitle post_type">Blog</div>
+  <h3 class="title"><a href="10-ways-pivotal-container-service-simplifies-kubernetes-for-vmware-shops.html">10 Ways Pivotal Container Service Simplifies Kubernetes for VMWare Shops</a></h3>
+  <div class="content"><p>The GA release of Pivotal Container Service (PKS) by Pivotal, VMware, and Google Cloud was an interesting development in the cloud-native ecosystem. We go into more detail on <a href="https://kubernetesonvmware.com/">how it changes the game...</a></p></div>  
+  <p class="more">
+  <a href="10-ways-pivotal-container-service-simplifies-kubernetes-for-vmware-shops.html" class="">Read more</a>
+  </p>
+<div class="bg" style="background-image:url(../../cdn2.hubspot.net/hub/6151115/hubfs/Imported_Blog_Media/5b5f47956abb67b274375264_RDPT-049002_Blog_3_Simplifying_Kube-12baa0.jpg?height=1400&amp;name=5b5f47956abb67b274375264_RDPT-049002_Blog_3_Simplifying_Kube-12.jpg)"></div>
+</div><!-- end coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+
+
+
+  
+<!-- start coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+<div class="hentry post">
+
+  <a href="key-networking-consideration-for-kubernetes.html" class="thumbnail"><img src="../../cdn2.hubspot.net/hub/6151115/hubfs/Imported_Blog_Media/5bc7794d6c55b54d45f492fa_RDPT-049002_Blog_8_Networking_Considerations-20header20imageb806.jpg?height=400&amp;name=5bc7794d6c55b54d45f492fa_RDPT-049002_Blog_8_Networking_Considerations-20header20image.jpg"></a>
+
+  <div class="subtitle post_type">Blog</div>
+  <h3 class="title"><a href="key-networking-consideration-for-kubernetes.html">Key Networking Considerations for Kubernetes</a></h3>
+  <div class="content"><p>Application architectures that leverage container-based workloads and microservices are quickly becoming the standard in enterprise production deployments. They contribute to faster and more...</p></div>  
+  <p class="more">
+  <a href="key-networking-consideration-for-kubernetes.html" class="">Read more</a>
+  </p>
+<div class="bg" style="background-image:url(../../cdn2.hubspot.net/hub/6151115/hubfs/Imported_Blog_Media/5bc7794d6c55b54d45f492fa_RDPT-049002_Blog_8_Networking_Considerations-20header20image1e2b.jpg?height=1400&amp;name=5bc7794d6c55b54d45f492fa_RDPT-049002_Blog_8_Networking_Considerations-20header20image.jpg)"></div>
+</div><!-- end coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+
+
+
+  
+<!-- start coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+<div class="hentry post">
+
+  <a href="transitioning-from-vms-to-containers-and-kubernetes-with-google-anthos.html" class="thumbnail"><img src="../../cdn2.hubspot.net/hub/6151115/hubfs/_illustrations/containers_header-illustration_redapt_16606.jpg?height=400&amp;name=containers_header-illustration_redapt_1.jpg"></a>
+
+  <div class="subtitle post_type">Blog</div>
+  <h3 class="title"><a href="transitioning-from-vms-to-containers-and-kubernetes-with-google-anthos.html">Transitioning From VMs to Containers and Kubernetes with Google Anthos</a></h3>
+  <div class="content"><p>One key to <a href="modernizing-an-existing-app-vs.html" rel="noopener" target="_blank">application modernization</a> is moving from VMs for development to containers and Kubernetes.</p></div>  
+  <p class="more">
+  <a href="transitioning-from-vms-to-containers-and-kubernetes-with-google-anthos.html" class="">Read more</a>
+  </p>
+<div class="bg" style="background-image:url(../../cdn2.hubspot.net/hub/6151115/hubfs/_illustrations/containers_header-illustration_redapt_1860d.jpg?height=1400&amp;name=containers_header-illustration_redapt_1.jpg)"></div>
+</div><!-- end coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+
+
+
+  
+<!-- start coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+<div class="hentry post">
+
+  <a href="managing-containers-on-openshift-vs-kubernetes.html" class="thumbnail"><img src="../../cdn2.hubspot.net/hub/6151115/hubfs/_illustrations/openshift-kubernetes_redapt_illustration_13829.jpg?height=400&amp;name=openshift-kubernetes_redapt_illustration_1.jpg"></a>
+
+  <div class="subtitle post_type">Blog</div>
+  <h3 class="title"><a href="managing-containers-on-openshift-vs-kubernetes.html">Managing Containers on OpenShift vs. Open-Source Kubernetes</a></h3>
+  <div class="content"><p>In short order, <a href="kubernetes-101-for-busy-it-executives.html" rel="noopener" target="_blank">Kubernetes</a> has become the predominant development platform.</p></div>  
+  <p class="more">
+  <a href="managing-containers-on-openshift-vs-kubernetes.html" class="">Read more</a>
+  </p>
+<div class="bg" style="background-image:url(../../cdn2.hubspot.net/hub/6151115/hubfs/_illustrations/openshift-kubernetes_redapt_illustration_1a4c4.jpg?height=1400&amp;name=openshift-kubernetes_redapt_illustration_1.jpg)"></div>
+</div><!-- end coded_template: id:14370199448 path:Redapt 2019/sections/blog/post.html -->
+
+
+
+
+</div>
+
+<p class="more">
+<a href="../insights/index.html"><span class="icon fa fa-angle-left"></span> Back to Insights</a>
+</p>
+</div>
+
+
+
+<!-- end coded_template: id:14372386500 path:Redapt 2019/sections/blog/related.html -->
+
+  
+</div></div>      
+      
+</div>
+<!-- start coded_template: id:12781464779 path:Redapt 2019/sections/footer.html -->
+<div class="theme-block " id="footer"><div class="wrap">
+      
+    <div id="nav-footer">
+      
+      <ul>
+      
+        <li class=" capabilities"><a href="../capabilities.html">Capabilities</a>
+          
+          <ul>
+            
+              <li><a href="../capabilities/infrastructure.html">Infrastructure</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/infrastructure/data-center-infrastructure.html">Datacenter Infrastructure</a></li>
+                  
+                    <li><a href="../capabilities/infrastructure/advanced-engineering-services.html">Advanced Engineering Services</a></li>
+                  
+                    <li><a href="../capabilities/infrastructure/global-logistics.html">Global Logistics</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/operations.html">Operations</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/operations/devops-automation.html">DevOps Automation</a></li>
+                  
+                    <li><a href="../capabilities/operations/site-operations.html">Site Operations</a></li>
+                  
+                    <li><a href="../capabilities/operations/modern-datacenter.html">Modern Datacenter</a></li>
+                  
+                    <li><a href="../capabilities/operations/managed-services.html">Managed Services</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/cloud-engineering.html">Cloud Engineering</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/cloud-engineering/public-cloud-implementation.html">Public Cloud Implementation</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/hybrid-cloud-implementation.html">Hybrid Cloud Implementation</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/app-data-migration.html">App &amp; Data Migration</a></li>
+                  
+                    <li><a href="../capabilities/cloud-engineering/emerging-technology-integration.html">Emerging Technology Integration</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+              <li><a href="../capabilities/business-transformation.html">Business Transformation</a>
+                
+                <ul>
+                  
+                    <li><a href="../capabilities/business-transformation/cloud-native-apps.html">Cloud Native Apps</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/advanced-data-and-analytics.html">Advanced Data &amp; Analytics</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/artificial-intelligence.html">Artificial Intelligence</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/devops-enablement.html">DevOps Enablement</a></li>
+                  
+                    <li><a href="../capabilities/business-transformation/iot-and-edge-solutions.html">IoT &amp; Edge Solutions</a></li>
+                  
+
+                </ul>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" results"><a href="../results.html">Results</a>
+          
+      </li>
+      
+        <li class="menu-ancestor current-menu-item  insights"><a href="../blog.html">Insights</a>
+          
+          <ul>
+            
+              <li><a href="../insights.html">Blog</a>
+                
+            </li>
+            
+              <li><a href="../insights/resources.html">Resources</a>
+                
+            </li>
+            
+              <li><a href="../blog.html">Events</a>
+                
+            </li>
+            
+            
+          </ul>
+          
+      </li>
+      
+        <li class=" careers"><a href="../careers.html">Careers</a>
+          
+      </li>
+      
+        <li class=" about"><a href="../about.html">About</a>
+          
+      </li>
+      
+        <li class=" contact"><a href="../contact.html">Contact</a>
+          
+      </li>
+      
+        <li class=" portal-login"><a href="https://forge.redapt.com/">Portal Login</a>
+          
+      </li>
+      
+        <li class=" search"><a href="#">Search</a>
+          
+      </li>
+      
+        <li class=" privacy-statement"><a href="../privacy-statement.html">Privacy Statement</a>
+          
+      </li>
+      
+      </ul>
+    </div>
+<div class="social">
+
+    <ul>
+        <li class="label">Visit us on:</li>        
+        <li><a href="https://www.facebook.com/Redapt/"><span class="icon fa fa-facebook"></span></a></li>
+        <li><a href="https://www.linkedin.com/company/redapt-inc"><span class="icon fa fa-linkedin"></span></a></li>
+        <li><a href="https://vimeo.com/redapt"><span class="icon fa fa-vimeo"></span></a></li>
+        <li><a href="https://twitter.com/redapt"><span class="icon fa fa-twitter"></span></a></li>
+      <li><a href="https://www.youtube.com/channel/UCRu4pdeqzIjej_0id_XAQqA/featured"><span class="icon fa fa-youtube"></span></a></li>
+      <!--
+        <li class="glassdoor"><a href="https://www.glassdoor.com/Overview/Working-at-Redapt-EI_IE722496.11,17.htm"><img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a></li>
+        -->
+    </ul>
+</div>        
+        
+    
+    
+    
+<div class="copyright">Copyright © 2020 Redapt / <a href="../privacy-statement.html">Privacy Statement</a>
+      <div class="address">
+        14051 NE 200th Street, Woodinville, WA 98072
+      </div>
+</div>      
+</div></div>
+
+
+<div id="overlay-mask"></div>
+<div id="overlay">
+<div class="logo"></div>
+<div class="content"><div class="embed"></div></div>
+<div class="close"><span class="icon fa fa-close "></span>
+</div>
+</div>
+
+<script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script><!-- end coded_template: id:12781464779 path:Redapt 2019/sections/footer.html -->
+      
+
+      
+        
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 6151115,
+                content: 27352027874,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+
+    <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+
+<script src="../_hcms/forms/v2.js"></script>
+
+    <script>
+        var options = {
+            formsBaseUrl: '/_hcms/forms/',
+            portalId: '6151115',
+            formId: '727520f4-9b04-4634-ae50-f9654b7a1c75',
+            formInstanceId: '259',
+            pageId: '27352027874',
+            
+            
+            
+            
+            pageName: "How Kubernetes Won the Container War",
+            
+            
+            
+            
+            
+            
+            css: '',
+            target: '#hs_form_target_my_form',
+            
+            
+            
+            
+            
+            contentType: "blog-post",
+            
+            
+            formData: {
+                cssClass: 'hs-form stacked hs-custom-form'
+            }
+        };
+
+        options.getExtraMetaDataBeforeSubmit = function() {
+            var metadata = {};
+            
+
+            if (hbspt.targetedContentMetadata) {
+                var count = hbspt.targetedContentMetadata.length;
+                var targetedContentData = [];
+                for (var i = 0; i < count; i++) {
+                    var tc = hbspt.targetedContentMetadata[i];
+                     if ( tc.length !== 3) {
+                        continue;
+                     }
+                     targetedContentData.push({
+                        definitionId: tc[0],
+                        criterionId: tc[1],
+                        smartTypeId: tc[2]
+                     });
+                }
+                metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+            }
+
+            return metadata;
+        };
+
+        hbspt.forms.create(options);
+    </script>
+
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.redapt.com\/blog\/how-kubernetes-won-the-container-war"]);
+_hsq.push(["setPageId", "27352027874"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 27352027874,
+    "legacyPageId": "27352027874",
+    "contentFolderId": null,
+    "contentGroupId": 11355233533,
+    "abTestId": null,
+    "languageVariantId": 27352027874,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/6151115.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1608539234662,
+    page_id: 27352027874,
+
+    content_group_id: 11355233533,
+    portal_id: 6151115,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.79/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZHQHWX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+    
+<!-- end coded_template: id:14370198209 path:Redapt 2019/templates/Redapt 2019 Blog Post.html -->
+</body>
+<!-- Mirrored from www.redapt.com/blog/how-kubernetes-won-the-container-war by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:37:36 GMT -->
+</html>

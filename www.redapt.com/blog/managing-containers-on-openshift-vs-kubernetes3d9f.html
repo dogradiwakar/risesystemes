@@ -1,0 +1,226 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/managing-containers-on-openshift-vs-kubernetes?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Managing Containers on OpenShift vs. Open-Source Kubernetes</title>
+    <link rel="canonical" href="managing-containers-on-openshift-vs-kubernetes.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Cloud-Native Engineering Team">
+
+    <meta name="description" content="For those companies that still rely on an on-premises infrastructure, Red Hat’s OpenShift is a perfect tool for making the shift to DevOps, containers, and modern application development vs. Kubernetes.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Managing Containers on OpenShift vs. Open-Source Kubernetes",
+        "datePublished": "2020-02-11T17:00:00Z",
+        "dateModified": "2020-12-09T23:17:38.445Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/managing-containers-on-openshift-vs-kubernetes",
+        "author": {
+          "@type": "Person",
+          "name": "Cloud-Native Engineering Team"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1081,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_illustrations/openshift-kubernetes_redapt_illustration_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="managing-containers-on-openshift-vs-kubernetes.html">Managing Containers on OpenShift vs. Open-Source Kubernetes</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/cloud-native-engineering-team.html">Cloud-Native Engineering Team</a> | Feb 11, 2020 5:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>In short order, <a href="kubernetes-101-for-busy-it-executives.html" rel="noopener" target="_blank">Kubernetes</a> has become the predominant development platform.</p>
+
+<p>For enterprises in the cloud especially, the integration of Kubernetes with cloud services greatly accelerated application development cycles.</p>
+<p>Not every enterprise is ready to go all-in on the cloud, though, which can greatly slow the adoption of Kubernetes.</p>
+<p><a href="https://content.redapt.com/red-hat-openshift-ebook" rel="noopener" target="_blank">Download Now: Use Red Hat OpenShift and Dell EMC Infrastructure to Accelerate Your Business</a></p>
+<p>For those companies that still rely on an on-premises infrastructure, or a hybrid approach, Red Hat’s OpenShift is a perfect tool for making the shift to DevOps, containers, and modern application development.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1c460.jpg?width=148&amp;name=openshift-logo_redapt_1.jpg" alt="OpenShift logo" width="161.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=74&amp;name=openshift-logo_redapt_1.jpg 74w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=148&amp;name=openshift-logo_redapt_1.jpg 148w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=222&amp;name=openshift-logo_redapt_1.jpg 222w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=296&amp;name=openshift-logo_redapt_1.jpg 296w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=370&amp;name=openshift-logo_redapt_1.jpg 370w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/openshift-logo_redapt_1.jpg?width=444&amp;name=openshift-logo_redapt_1.jpg 444w" height="161.0"></amp-img></strong><strong>The Benefits of OpenShift</strong></h2>
+<p>In short, <a href="building-cloud-native-applications-with-openshift.html" rel="noopener" target="_blank">OpenShift</a> is a complete, enterprise-ready platform for developing with Kubernetes right out of the box. It's a distribution of <a href="4-top-tools-for-managing-kubernetes-clusters.html" rel="noopener" target="_blank">Kubernetes</a> that allows developers to have everything they need to create next-generation applications.</p>
+<p>Included and fully integrated within the package are a number of open-source tools developed by Red Hat, along with:</p>
+<ul>
+<li>Management tools like Prometheus and operation lifecycle management</li>
+<li>Developer tools like CI/CD pipelines and an embedded container registry</li>
+<li>Support from Red Hat’s world-class engineering team</li>
+</ul>
+<p>Beyond what’s included with OpenShift, a major benefit of the package is flexibility for enterprises. OpenShift is compatible everywhere you run infrastructure—the public cloud, virtualized environments, bare metal in your own data center, etc.</p>
+<p>In addition, this compatibility means you can use the same software stacks and automation tools you’re already familiar with, helping to reduce the learning curve while adopting and using Kubernetes.</p>
+<p><a href="https://www.redhat.com/en/blog/openshift-and-kubernetes-whats-difference?extIdCarryOver=true&amp;sc_cid=701f2000001OH7iAAG" rel="noopener" target="_blank">You can read more about OpenShift and Kubernetes on their blog, here.</a></p>
+<h2><strong><amp-img src="../hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon2d13.png?width=132&amp;name=redapt_blog-icons_kubernetes-icon.png" alt="Kubernetes logo" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=66&amp;name=redapt_blog-icons_kubernetes-icon.png 66w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=132&amp;name=redapt_blog-icons_kubernetes-icon.png 132w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=198&amp;name=redapt_blog-icons_kubernetes-icon.png 198w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=264&amp;name=redapt_blog-icons_kubernetes-icon.png 264w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=330&amp;name=redapt_blog-icons_kubernetes-icon.png 330w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/redapt_blog-icons_kubernetes-icon.png?width=396&amp;name=redapt_blog-icons_kubernetes-icon.png 396w" height="167.0"></amp-img></strong><strong>OpenShift vs. Kubernetes</strong></h2>
+<p>While the underlying scheduler and run times are basically the same between open-source Kubernetes and OpenShift, the out-of-the-box nature of Red Hat’s product provides an ease of use—and fewer engineers—to put it to work.</p>
+<p>For example:</p>
+<p>With OpenShift, your developers can have entire build systems in your cluster that are powered by <a href="https://jenkins.io/" rel="noopener" target="_blank">Jenkins</a>. So if you are developing a <a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">microservices</a> code, for example, you can check in your code and run the build process, then seamlessly take the output container and place it in a registry already built into OpenShift for deployment.</p>
+<p>This entire process can be handled end-to-end via OpenShift, regardless of whether you’re working on-premises or in the cloud—<em>and</em> you have access to Red Hat’s support whenever you need it.</p>
+<p>Open-source Kubernetes, in comparison, can require teams of engineers in order to achieve each of the above steps. Then those engineers need to tie each of the steps together.</p>
+<div>
+  <amp-img class="vidyard-player-embed" src="../../cdn.vidyard.com/thumbnails/custom/KVAvxIimSAelJCYASyrF6g.jpg" width="1920" height="1080" alt="2020.01_clip04_blog-video_paul-w" layout="responsive"></amp-img>
+
+</div>
+
+<p><br>All of this is to say that while OpenShift is not right for every enterprise—large tech companies in particular tend to have the army of engineers on hand to employ Kubernetes—<strong>for small businesses or those looking to adopt containers, Red Hat’s tool can be a game-changer.</strong></p>
+<p>For more information on how OpenShift can accelerate the way your enterprise develops and deploys products, download our free eBook, <em><a href="https://content.redapt.com/red-hat-openshift-ebook" rel="noopener" target="_blank">Build More Applications, Faster</a></em>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="managing-containers-on-openshift-vs-kubernetes.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq9c79.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Managing+Containers+on+OpenShift+vs.+Open-Source+Kubernetes&amp;pi=25199412234&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/managing-containers-on-openshift-vs-kubernetes?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:10 GMT -->
+</html>

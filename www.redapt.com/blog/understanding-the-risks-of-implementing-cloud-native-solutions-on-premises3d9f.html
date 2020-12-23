@@ -1,0 +1,221 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/understanding-the-risks-of-implementing-cloud-native-solutions-on-premises?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Understanding the Risks of Implementing Cloud Native Solutions</title>
+    <link rel="canonical" href="understanding-the-risks-of-implementing-cloud-native-solutions-on-premises.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="One of the major fears we’ve heard from customers looking to take the plunge into deploying cloud native solutions on-premises is whether doing so will double their operations costs.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Understanding the Risks of Implementing Cloud Native Solutions",
+        "datePublished": "2019-10-28T20:12:07Z",
+        "dateModified": "2020-10-02T23:28:54.332Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/understanding-the-risks-of-implementing-cloud-native-solutions-on-premises",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/2019.10%20Blog%20Images/redapt_blog-graphics_executives-planning.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="understanding-the-risks-of-implementing-cloud-native-solutions-on-premises.html">Understanding the Risks of Implementing Cloud Native Solutions</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Oct 28, 2019 8:12:07 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>One of the major fears we’ve heard from customers looking to take the plunge into deploying cloud-native solutions on-premises is whether doing so will double their operations costs.</p>
+
+<p>Our answer is usually the same: it will if you don’t implement the solutions correctly.</p>
+<h2><strong><amp-img src="../hubfs/2019.10%20Blog%20Images/redapt_icons_capabilities_cloud-native-apps.svg" alt="redapt_icons_capabilities_cloud-native-apps" width="400.0" height="400.0" layout="responsive"></amp-img>Determining whether cloud-native makes sense</strong></h2>
+<p>Before even beginning a discussion about <a href="what-to-expect-when-deploying-datacenter-infrastructure-at-scale.html" rel="noopener" target="_blank">implementing cloud-native solutions on-premises</a>, it’s critical to map out your needs objectively. Some of the questions that should be answered include:</p>
+<ul>
+<li>
+<p>What are your latency requirements?</p>
+</li>
+<li>
+<p>How much flexibility do you need?</p>
+</li>
+<li>
+<p>What are your business and go-to-market models?</p>
+</li>
+</ul>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1d812.png?width=100&amp;name=redapt_blog-graphics_money-1.png" alt="redapt_blog-graphics_money-1" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=50&amp;name=redapt_blog-graphics_money-1.png 50w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=100&amp;name=redapt_blog-graphics_money-1.png 100w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=150&amp;name=redapt_blog-graphics_money-1.png 150w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=200&amp;name=redapt_blog-graphics_money-1.png 200w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=250&amp;name=redapt_blog-graphics_money-1.png 250w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_money-1.png?width=300&amp;name=redapt_blog-graphics_money-1.png 300w" height="168.0"></amp-img>Considering all the costs involved</strong></h2>
+<p>Only after these kinds of questions are answered should a company seriously begin thinking about a big step like cloud-native solutions on-premises.</p>
+<p><a href="https://content.redapt.com/cloud-native-apps" rel="noopener" target="_blank">Click here to read the complete guide on building cloud native applications.</a></p>
+<p>Why? Because the costs of on-premises go beyond simple data center infrastructure expenses. There are operational, maintenance, power, and talent costs — a slew of expenses that can lead to sticker shock for a company.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making7260.jpg?width=100&amp;name=redapt_icon_decision-making.jpg" alt="redapt_icon_decision-making" width="334.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=50&amp;name=redapt_icon_decision-making.jpg 50w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=100&amp;name=redapt_icon_decision-making.jpg 100w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=150&amp;name=redapt_icon_decision-making.jpg 150w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=200&amp;name=redapt_icon_decision-making.jpg 200w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=250&amp;name=redapt_icon_decision-making.jpg 250w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_icon_decision-making.jpg?width=300&amp;name=redapt_icon_decision-making.jpg 300w" height="335.0" layout="responsive"></amp-img>Making the right decision for your organization</strong></h2>
+<p>Implementing cloud-native solutions on-premises can bring very real benefits. But it’s not the right approach for every enterprise. As with any other major technical decision, it’s a decision that should not be taken lightly.</p>
+<p>The key is to take a hard look at what you’re trying to accomplish and then chart out possible solutions. <a href="https://content.redapt.com/tech-maturity-model-ebook" rel="noopener" target="_blank">Assess your technical maturity</a> and weigh the needed investment.</p>
+<p>If you’ve done your homework and cloud-native on-premises <em>is</em> a good fit, then the next step is building out an architecture that is both cost-effective and practical. Not doing so, and not understanding your needs before investing in something like cloud-native applications, is where the real risks live.</p>
+<p>For more on negating the risks around deploying cloud-native solutions, download our free eBook, <a href="https://content.redapt.com/migrating-cloud-native-tech-stacks-ebook" rel="noopener" target="_blank"><em>Migrating Cloud-Native Tech Stacks On-Premises</em></a>.</p>
+<p><span></span></p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="understanding-the-risks-of-implementing-cloud-native-solutions-on-premises.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqa5c2.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Understanding+the+Risks+of+Implementing+Cloud+Native+Solutions&amp;pi=19308926458&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/understanding-the-risks-of-implementing-cloud-native-solutions-on-premises?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:26 GMT -->
+</html>

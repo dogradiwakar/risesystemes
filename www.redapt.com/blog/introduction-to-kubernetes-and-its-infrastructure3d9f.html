@@ -1,0 +1,206 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/introduction-to-kubernetes-and-its-infrastructure?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Introduction to Kubernetes And Its Infrastructure</title>
+    <link rel="canonical" href="introduction-to-kubernetes-and-its-infrastructure.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Kubernetes (K8s) is a Container Orchestration Platform that was influenced by Google engineers experience developing and working with Borg.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Introduction to Kubernetes And Its Infrastructure",
+        "datePublished": "2017-03-28T00:00:00Z",
+        "dateModified": "2020-08-31T21:47:10.330Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/introduction-to-kubernetes-and-its-infrastructure",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/59543b62e8501c57c11f70fa_kubernetes-post-logo.png"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="introduction-to-kubernetes-and-its-infrastructure.html">Introduction to Kubernetes And Its Infrastructure</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Mar 28, 2017 12:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p><a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-guide" rel="noopener" target="_blank">Kubernetes (K8s)</a> is a Container Orchestration Platform that was influenced by Google engineers experience developing and working with Borg. As many know, Google has been running containers at large scale for more than a decade. K8s is completely open-source, API Driven, written in GoLang, has lots of community support, and hundreds of 3rd party add-ons.</p>
+
+<p>K8s from the outside consists of three major components: etcd cluster, master server(s), and minion worker node(s). It is common to see the master services run on the same nodes as the etcd cluster, which is a distributed key-value store.</p>
+<p>The master server runs the API, the Controller Manager, and the Scheduler. The API uses the etcd service to store any state related to running K8s. This includes the nodes in the cluster, what containers are running where, what volumes are attached to containers, secrets, config maps, etc. The controller manager embeds the core control loop for K8s, and constantly tries to make the real-world match the expected state. The scheduler is used to ensure that pods are scheduled according to their affinity, maintain data locality, etc.</p>
+<p>The minion worker nodes are effectively the pool of resources that can be consumed by running containers. Each minion should have K8s labels designating its failover zone, and name. You can make use of these labels by defining affinity when distributing containers across the system.</p>
+
+<p><amp-img class="aligncenter size-full wp-image-9769" src="../hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes12be.png?width=737&amp;height=884&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png" alt="" width="737" height="884" srcset="https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=369&amp;height=442&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 369w, https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=737&amp;height=884&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 737w, https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=1106&amp;height=1326&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 1106w, https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=1474&amp;height=1768&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 1474w, https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=1843&amp;height=2210&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 1843w, https://www.redapt.com/hs-fs/hubfs/Imported_Blog_Media/5952ce6985d09f0ac377645e_intro-to-kubernetes.png?width=2211&amp;height=2652&amp;name=5952ce6985d09f0ac377645e_intro-to-kubernetes.png 2211w" layout="responsive"></amp-img>In K8s, a container or a specialized group of containers, are collectively run in what is called a Pod. Each Pod runs on a single minion host with an overlay network, and thus has its own IP address. It's common to run many similar pods for load and redundancy spread throughout the minion hosts.</p>
+<p>While it is possible to create one pod at a time. K8s provides various mechanisms for controlling the number of replicas and location of pods, as well as auto-restart on delete/failures. A Replica Set can be defined in place of a pod definition, and the number of replicas becomes a tunable field. If the node is killed and a pod dies, the Controller Manager and Scheduler will work to re-schedule a new pod, until the requirements of the Replica set are met.</p>
+<p>Beyond a simple Replica Set, K8s also has the concept called a Deployment. In the current iteration of K8s, the deployment effectively manages replica sets. When rolling out new images via Deployment, a 'green' Replica Set is created, while the old Replica Set is 'blue'; The green Replica Set scales up incrementally, while simultaneously scaling down the blue Replica Set. You can also stand up two equal size Replica Sets, cut traffic over, and then delete the old Replica Set, for non blue-green rollouts.</p>
+<p>Launching many pods is great, but what about routing traffic to all of the pods as I adjust the replica counts? To handle this, K8s introduces a concept called a Service. A service has a few different types depending on whether load balancing is necessary, and how ports are translated/specified. Routing generally happens via K8s pod labels and selectors.</p>
+<p>No matter what type of resource you create in Kubernetes, it can be created with a json or yml file, which can be kept in version control. This is useful for rapid re-deploys, CICD, and tracking changes to pod Definition/Environment over time, for the application.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="introduction-to-kubernetes-and-its-infrastructure.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq7971.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Introduction+to+Kubernetes+And+Its+Infrastructure&amp;pi=12155671031&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/introduction-to-kubernetes-and-its-infrastructure?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:32 GMT -->
+</html>

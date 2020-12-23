@@ -1,0 +1,215 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/configuring-your-data-storage-for-high-performance-ai?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Configuring Your Data Storage for High-Performance AI</title>
+    <link rel="canonical" href="configuring-your-data-storage-for-high-performance-ai.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="To configure your data storage the right way to handle the job, you’ll need to think about capacity, organization, and compute.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Configuring Your Data Storage for High-Performance AI",
+        "datePublished": "2019-12-16T22:29:16Z",
+        "dateModified": "2020-08-24T19:57:57.975Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/configuring-your-data-storage-for-high-performance-ai",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_other-graphics/server_redapt_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="configuring-your-data-storage-for-high-performance-ai.html">Configuring Your Data Storage for High-Performance AI</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Dec 16, 2019 10:29:16 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>High-performance AI is the key to unlocking insights and opportunities in data-intensive environments.</p>
+
+<p>But as powerful as AI is becoming, you can’t simply throw an algorithm at a pool of information. You need to help it effectively find the insights you’re looking for.</p>
+<p>That means configuring your data storage the right way to handle the job. To do this, you’ll need to think about <strong>capacity</strong>, <strong>organization</strong>, and <strong>compute</strong>. Let's break each one of these down further.</p>
+<h2><span>1. Capacity</span></h2>
+<p>What is commonly known as binary data—video, audio, images, etc.—requires a tremendous amount of storage compared to non-binary, or text data.</p>
+<p>Obviously, this means you need to have the right amount of storage capacity, whether it’s in the cloud, on-premises, or a hybrid solution.</p>
+<p>With enough data storage capacity, you can build out data lakes—a place where all your data from all your different incoming pipelines can land safely and securely.</p>
+<h2>2. Organization</h2>
+<p>High-performance AI can be a powerful tool for sifting through massive amounts of data. However, it still needs to know where to go and what it’s looking for if you want to find insights and make them actionable on a quick turnaround.</p>
+<p>Since a disorganized data lake can easily become a choke point for your entire enterprise, having a solid plan in place to arrange data by source is critical.</p>
+<h2>3. Compute</h2>
+<p>Data lakes are <em>where</em> your data is stored, and compute is <em>what</em> <em>you do</em> with that data.</p>
+<p>For high-performance AI, compute is often centered around speed.</p>
+<p>Take mobile ads, for example.</p>
+<p>With high-performance AI, ads can be configured so that when a person is approaching a certain level in a game, the ad platform packages up the persona of that player—age, location, etc.—and immediately put that persona out for a bid. A company winning the bid can then have their ad instantly surface when the player hits the level.</p>
+<h2><strong>To sum up</strong></h2>
+<p>Employing high-performance AI requires having the right data storage solution in place to meet your needs. You need the capacity, the organization plan, and the right amount of compute in place in order to successfully let your algorithms loose.</p>
+<p>For more on putting massive amounts of data to work in your enterprise, download our free whitepaper <a href="https://content.redapt.com/big-data-made-simple-wp" rel="noopener" target="_blank"><em>Big Data Made Simple</em></a>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="configuring-your-data-storage-for-high-performance-ai.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqe819.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Configuring+Your+Data+Storage+for+High-Performance+AI&amp;pi=23478354798&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/configuring-your-data-storage-for-high-performance-ai?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:18 GMT -->
+</html>

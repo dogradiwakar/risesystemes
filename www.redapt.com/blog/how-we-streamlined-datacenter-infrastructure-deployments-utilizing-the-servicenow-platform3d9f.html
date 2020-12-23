@@ -1,0 +1,216 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:38:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>How We Streamlined Datacenter Infrastructure Deployments Utilizing the ServiceNow Platform</title>
+    <link rel="canonical" href="how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="When it comes to deploying new hardware, streamlining the process delivers very real dividends.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How We Streamlined Datacenter Infrastructure Deployments Utilizing the ServiceNow Platform",
+        "datePublished": "2020-09-30T15:00:00Z",
+        "dateModified": "2020-09-30T15:00:01.008Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1081,
+          
+          "url": "https://f.hubspotusercontent10.net/hubfs/6151115/_illustrations/servicenow-logo-header.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform.html">How We Streamlined Datacenter Infrastructure Deployments Utilizing the ServiceNow Platform</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Sep 30, 2020 3:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p><span>Many large enterprises, SaaS, and hyperscale organizations continue to scale their datacenter infrastructure as demand increases for their services.</span></p>
+<p>Given the scale of these deployments, along with the challenges of current events, organizations need a way to streamline their deployment processes.&nbsp;</p>
+<p>That’s where we come in.</p>
+<p>Through our <a href="../capabilities/rack-integration.html" rel="noopener" target="_blank"><span>rack integration services</span></a>, we work with clients to accelerate deployments to datacenters across the globe.</p>
+<p>This acceleration process includes provisioning, testing, and validating all of the company’s hardware before it is delivered to the datacenter of choice.</p>
+<p>This not only allows our clients to deploy new hardware without having to do all the above steps at a datacenter, it greatly increases the time-to-value for new hardware.</p>
+<p><amp-img src="../hs-fs/hubfs/_photography/testing-out-working-on-servers9cc5.jpg?width=1920&amp;name=testing-out-working-on-servers.jpg" alt="testing-out-working-on-servers" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=960&amp;name=testing-out-working-on-servers.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=1920&amp;name=testing-out-working-on-servers.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=2880&amp;name=testing-out-working-on-servers.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=3840&amp;name=testing-out-working-on-servers.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=4800&amp;name=testing-out-working-on-servers.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/testing-out-working-on-servers.jpg?width=5760&amp;name=testing-out-working-on-servers.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<h2>Heavy lifting through our API</h2>
+<p>The driving force behind our streamlined process is our API, which makes it possible for clients to build a reconciliation system to import the particular data the company wants by hitting the API every hour. While the API can be consumed by any client system, it’s highly effective for clients leveraging the ServiceNow platform.</p>
+<p>During these hits, serials and asset tags of all hardware are validated, with each line item in a fully integrated rack featuring its own invoice number. In many ways, this is akin to receiving a large package and being able to simply scan a tag on the outside of the box to receive a complete inventory of every item inside.&nbsp;</p>
+<h2>Shorter timeline, faster ROI</h2>
+<p>Without our streamlined process, companies will spend hours—if not days—verifying all items within a rack of hardware delivered to them.&nbsp;</p>
+<p>Four to five employees would need to be present to sift through all the parts and components, then everything would need to be matched to individual serial numbers before invoicing could be completed.</p>
+<p>However, by leveraging our API this entire process is consolidated, greatly accelerating the delivery and deployment of new hardware for clients.</p>
+<p><amp-img src="../hs-fs/hubfs/_illustrations/api-server-data-wide11d7.jpg?width=1920&amp;name=api-server-data-wide.jpg" alt="api-server-data-wide" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=960&amp;name=api-server-data-wide.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=1920&amp;name=api-server-data-wide.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=2880&amp;name=api-server-data-wide.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=3840&amp;name=api-server-data-wide.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=4800&amp;name=api-server-data-wide.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_illustrations/api-server-data-wide.jpg?width=5760&amp;name=api-server-data-wide.jpg 5760w" height="451.0" layout="responsive"></amp-img></p>
+<p>Additionally, since datacenters all have their own unique requirements for accepting deliveries, our API allows each client to automate their shipment receival process with their datacenter directly, so there are no delays when items are actually delivered. And, because much of the process is fully automated, there is less touch time at the actual datacenter—a definite benefit during this time of reduced staffing due to the pandemic.</p>
+<h2>The speed ripple effect</h2>
+<p>In a time when winners and losers are often determined by efficiency, the ability to deploy new hardware at an accelerated rate provides organizations with a competitive advantage.</p>
+<p>With our robust API, our rack integration clients are able to quickly turn around invoicing and take advantage of its software and hardware much faster than through deployment automation. This is particularly critical when it comes to scaling quickly during times of need.</p>
+<p>In other words, our clients—especially those on the ServiceNow platform—are able to benefit from our streamlined deployment process. And that, as they say, is a win-win.</p>
+<p><span><a href="../capabilities/rack-integration.html" rel="noopener" target="_blank">Click here</a> to learn more about how Redapt can help your business efficiently deploy new hardware. </span></p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq6e3a.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=How+We+Streamlined+Datacenter+Infrastructure+Deployments+Utilizing+the+ServiceNow+Platform&amp;pi=35289805129&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/how-we-streamlined-datacenter-infrastructure-deployments-utilizing-the-servicenow-platform?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:38:47 GMT -->
+</html>

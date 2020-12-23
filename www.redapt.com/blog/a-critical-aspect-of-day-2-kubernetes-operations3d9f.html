@@ -1,0 +1,239 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/a-critical-aspect-of-day-2-kubernetes-operations?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:45:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>A Critical Aspect of Day 2 Kubernetes Operations</title>
+    <link rel="canonical" href="a-critical-aspect-of-day-2-kubernetes-operations.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Jerry Meisner">
+
+    <meta name="description" content="This guide to the technical aspects of Day 2 Kubernetes operations will help you prepare for the challenges that come after implementing Kubernetes.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A Critical Aspect of Day 2 Kubernetes Operations",
+        "datePublished": "2020-05-13T16:00:00Z",
+        "dateModified": "2020-08-31T21:08:26.575Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/a-critical-aspect-of-day-2-kubernetes-operations",
+        "author": {
+          "@type": "Person",
+          "name": "Jerry Meisner"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_photography/two-people-analyzing-code.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="a-critical-aspect-of-day-2-kubernetes-operations.html">A Critical Aspect of Day 2 Kubernetes Operations</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/jerry-meisner.html">Jerry Meisner</a> | May 13, 2020 4:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Kubernetes is widely known as a go-to solution for managing, automating, and scaling containers—with one caveat: "Day 2" can be painful.</p>
+
+<p>This guide to the technical aspects of Day 2 Kubernetes operations will help you prepare for the challenges that come after implementing Kubernetes, so you can avoid the Kubernetes growing pains and enjoy success.</p>
+<h2><strong>Day 2 Kubernetes operations—technical considerations</strong></h2>
+<p>If <a href="https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29" target="_blank" rel="noopener">Day 1 0f Kubernetes</a> is getting the cluster up and running, then Day 2 is taking ownership of operating the cluster.</p>
+<p>This is the part of Kubernetes that many organizations find the most difficult. Why? Because there's a lot to handle and it can get quite complex.</p>
+<table>
+<tbody>
+<tr>
+<td><amp-img src="../hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetesed98.png?width=183&amp;name=redapt-guide-mockup_kubernetes.png" alt="redapt-guide-mockup_kubernetes" width="349.0" srcset="https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=92&amp;name=redapt-guide-mockup_kubernetes.png 92w, https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=183&amp;name=redapt-guide-mockup_kubernetes.png 183w, https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=275&amp;name=redapt-guide-mockup_kubernetes.png 275w, https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=366&amp;name=redapt-guide-mockup_kubernetes.png 366w, https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=458&amp;name=redapt-guide-mockup_kubernetes.png 458w, https://www.redapt.com/hs-fs/hubfs/Redapt%202019/pillar/kubernetes/redapt-guide-mockup_kubernetes.png?width=549&amp;name=redapt-guide-mockup_kubernetes.png 549w" height="227.0" layout="responsive"></amp-img></td>
+<td>
+<h5><span><a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-download" rel="noopener" target="_blank"><strong>Download Now: The Recipe for Deploying Managed Kubernetes On-Premises</strong></a></span></h5>
+</td>
+</tr>
+</tbody>
+</table>
+<h4>&nbsp;</h4>
+<h4><span>Let’s break down the technical aspects of Day 2 Kubernetes:</span></h4>
+<h5><strong><amp-img src="../hs-fs/hubfs/_icons/redapt_icon-list-process-stepddc2.png?width=62&amp;name=redapt_icon-list-process-step.png" alt="redapt_icon-list-process-step" width="168.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=31&amp;name=redapt_icon-list-process-step.png 31w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=62&amp;name=redapt_icon-list-process-step.png 62w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=93&amp;name=redapt_icon-list-process-step.png 93w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=124&amp;name=redapt_icon-list-process-step.png 124w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=155&amp;name=redapt_icon-list-process-step.png 155w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-list-process-step.png?width=186&amp;name=redapt_icon-list-process-step.png 186w" height="167.0"></amp-img><span>Centralized logging</span></strong></h5>
+<p>Logging in to containerized environments is different than what traditional computer engineers may be used to. It's important to understand log-in best practices to take advantage of Kubernetes native capabilities and to establish a centralized log collection mechanism that provides adequate insights.</p>
+<h5><strong><amp-img src="../hs-fs/hubfs/_icons/app-magnifying-glassa69f.jpg?width=64&amp;name=app-magnifying-glass.jpg" alt="app-magnifying-glass" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=32&amp;name=app-magnifying-glass.jpg 32w, https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=64&amp;name=app-magnifying-glass.jpg 64w, https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=96&amp;name=app-magnifying-glass.jpg 96w, https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=128&amp;name=app-magnifying-glass.jpg 128w, https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=160&amp;name=app-magnifying-glass.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/app-magnifying-glass.jpg?width=192&amp;name=app-magnifying-glass.jpg 192w" height="81.0"></amp-img><span>Monitoring</span></strong></h5>
+<p>Open-source monitoring platform, Prometheus, tracks the CPUs, memory, and workloads that are being consumed across the cluster, in a manner that can be queried. This is done with the goal to allow for visualizing workloads and deciding on infrastructure changes that could enhance performance or save money.</p>
+<h5><strong><amp-img src="../hs-fs/hubfs/_icons/workload-scalingaff1.jpg?width=67&amp;name=workload-scaling.jpg" alt="workload-scaling" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=34&amp;name=workload-scaling.jpg 34w, https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=67&amp;name=workload-scaling.jpg 67w, https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=101&amp;name=workload-scaling.jpg 101w, https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=134&amp;name=workload-scaling.jpg 134w, https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=168&amp;name=workload-scaling.jpg 168w, https://www.redapt.com/hs-fs/hubfs/_icons/workload-scaling.jpg?width=201&amp;name=workload-scaling.jpg 201w" height="81.0"></amp-img><span>Scaling</span></strong></h5>
+<p>Workloads scaling up and down is another variable to monitor in Day 2 Kubernetes operations, so you aren't caught off guard. In cloud platforms, ensuring that hardware scale operations are in tandem with the container scale operations can give better cost efficiency, as well.</p>
+<h5><strong><amp-img src="../hs-fs/hubfs/_icons/app-cycleede8.jpg?width=66&amp;name=app-cycle.jpg" alt="app-cycle" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=33&amp;name=app-cycle.jpg 33w, https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=66&amp;name=app-cycle.jpg 66w, https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=99&amp;name=app-cycle.jpg 99w, https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=132&amp;name=app-cycle.jpg 132w, https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=165&amp;name=app-cycle.jpg 165w, https://www.redapt.com/hs-fs/hubfs/_icons/app-cycle.jpg?width=198&amp;name=app-cycle.jpg 198w" height="81.0"></amp-img><span>Updating</span></strong></h5>
+<p>Kubernetes updates tend to be released every few months. So, from Day 2 onward, you'll need a strategy for how to upgrade Kubernetes and the various components that are used with it so that security patches are applied in a timely manner.</p>
+<h5><strong><amp-img src="../hs-fs/hubfs/_icons/shield-security-magnifying-glass2f03.jpg?width=62&amp;name=shield-security-magnifying-glass.jpg" alt="shield-security-magnifying-glass" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=31&amp;name=shield-security-magnifying-glass.jpg 31w, https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=62&amp;name=shield-security-magnifying-glass.jpg 62w, https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=93&amp;name=shield-security-magnifying-glass.jpg 93w, https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=124&amp;name=shield-security-magnifying-glass.jpg 124w, https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=155&amp;name=shield-security-magnifying-glass.jpg 155w, https://www.redapt.com/hs-fs/hubfs/_icons/shield-security-magnifying-glass.jpg?width=186&amp;name=shield-security-magnifying-glass.jpg 186w" height="81.0"></amp-img><span>Security</span></strong></h5>
+<p>Your organization will need to monitor security from Day 2 of your Kubernetes operations onward through container image scanning, network policies, pod policies, and securing the hardware itself.</p>
+<h2><strong>Monitoring Day 2 Kubernetes</strong></h2>
+<p>Adding to the complexity of Day 2 operations are the <a href="https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/" target="_blank" rel="noopener">four golden signals</a>:&nbsp;</p>
+<ol>
+<li>Traffic or number of users in the system</li>
+<li>Latency or time taken to service requests</li>
+<li>Saturation or fullness</li>
+<li>Errors</li>
+</ol>
+<p>You'll want to monitor each of these signals live, but you won't have a clear image of how they'll look until Kubernetes goes live. So there's a certain amount of "wait and see" that you'll need to embrace as you get through Day 2 Kubernetes operations.</p>
+<p><amp-img src="../hs-fs/hubfs/_photography/two-people-looking-at-screen15e7.jpg?width=1920&amp;name=two-people-looking-at-screen.jpg" alt="two-people-looking-at-screen" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=960&amp;name=two-people-looking-at-screen.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=1920&amp;name=two-people-looking-at-screen.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=2880&amp;name=two-people-looking-at-screen.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=3840&amp;name=two-people-looking-at-screen.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=4800&amp;name=two-people-looking-at-screen.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=5760&amp;name=two-people-looking-at-screen.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>After adopting Kubernetes, <strong>ongoing monitoring of these technical aspects will help your organization analyze long-term trends, perform experiments, and troubleshoot problems so it all works as intended.</strong></p>
+<p>Long-term, successful monitoring will help your organization decrease costs, fine-tune performance, and leverage Kubernetes with the fewest growing pains.</p>
+<p>Taking all the maintenance that goes into Kubernetes operations into account, it should be clear that organizations need resources to lighten the load. <a href="https://cloud.google.com/anthos">Google Anthos</a> is one option for <a href="5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter.html">managing a Kubernetes cluster on premises</a>.</p>
+<p>While many businesses choose this model, it does add to the complexity at the outset. So, you'll want help to fully prepare for successful Day 2 Kubernetes operations. Successful implementation starts with a thoughtful discussion of your enterprise needs and the right strategy.</p>
+<p>Redapt is here to help you talk through the implications of Kubernetes with Anthos on Dell EMC infrastructure. Learn more about how we can help your business transition to the <a href="../capabilities/cloud-engineering/hybrid-cloud-implementation.html">hybrid cloud</a>. Read our free guide, <a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-download" rel="noopener" target="_blank"><em>The Recipe for Deploying Managed Kubernetes On-Premises</em></a>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="a-critical-aspect-of-day-2-kubernetes-operations.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqe8c0.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=A+Critical+Aspect+of+Day+2+Kubernetes+Operations&amp;pi=29120021587&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/a-critical-aspect-of-day-2-kubernetes-operations?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:45:45 GMT -->
+</html>

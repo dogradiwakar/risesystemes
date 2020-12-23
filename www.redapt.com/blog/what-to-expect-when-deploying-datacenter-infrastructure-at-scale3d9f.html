@@ -1,0 +1,223 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/what-to-expect-when-deploying-datacenter-infrastructure-at-scale?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>What To Expect When Deploying Datacenter Infrastructure At Scale</title>
+    <link rel="canonical" href="what-to-expect-when-deploying-datacenter-infrastructure-at-scale.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Here are some things you need to consider to make sure you have realistic expectations going into the process of operating your own on-premises infrastructure.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What To Expect When Deploying Datacenter Infrastructure At Scale",
+        "datePublished": "2019-10-15T16:00:00Z",
+        "dateModified": "2020-08-31T21:57:41.275Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/what-to-expect-when-deploying-datacenter-infrastructure-at-scale",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/2019.10%20Blog%20Images/redapt-blog-header_infrastructure.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="what-to-expect-when-deploying-datacenter-infrastructure-at-scale.html">What To Expect When Deploying Datacenter Infrastructure At Scale</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Oct 15, 2019 4:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>There are many reasons why a company would want to have its own on-premises infrastructure. If your organization is considering doing so, there are two questions you should ask first.</p>
+
+<p>They are:</p>
+<ol>
+<li>Are you capable of operating your own infrastructure?</li>
+<li>Do you have the technical knowledge and capabilities in place and in-house?</li>
+</ol>
+<p><a href="https://content.redapt.com/modernizing-your-datacenter" rel="noopener" target="_blank">Click here to read the complete guide on modernizing your datacenter.</a></p>
+<p>For a lot of companies, these questions can be tricky to answer. But if the ultimate answer is yes, that means your next step is to work with engineers on infrastructure design to determine what the finished state will look like.</p>
+<p>To make sure you have realistic expectations going into the process, here are some things you need to consider.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar42eb.jpg?width=75&amp;name=redapt-blog-calendar.jpg" alt="redapt-blog-calendar" width="334.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=38&amp;name=redapt-blog-calendar.jpg 38w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=75&amp;name=redapt-blog-calendar.jpg 75w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=113&amp;name=redapt-blog-calendar.jpg 113w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=150&amp;name=redapt-blog-calendar.jpg 150w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=188&amp;name=redapt-blog-calendar.jpg 188w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-calendar.jpg?width=225&amp;name=redapt-blog-calendar.jpg 225w" height="335.0" layout="responsive"></amp-img>1. Lead time</strong></h2>
+<p>Put simply, lead time is the amount of time it takes for the process of planning and engineering a datacenter. And it is <em>not</em> something you want to underestimate.</p>
+<p>When you’re used to working with software, it’s easy to miscalculate the number of challenges that can occur as soon as you start considering physical infrastructure. Things like supply chains, logistics, actual assembly ... each have its own moving part that can hit snags.</p>
+<p>Consider this:</p>
+<p>Let’s say you’ve got a custom infrastructure fully developed and ready to ship to your datacenter. Suddenly, a massive snowstorm hits — blocking out and closing miles of roads between the warehouse and your location. Issues like these are easily overseen because they’re not usually dealt with day-to-day, but they’re still crucial to consider as you plan your datacenter.</p>
+<p>So when you first set to work, make sure you have a sensible—and achievable—finish line. <a href="../capabilities/operations/modern-datacenter.html" rel="noopener" target="_blank">Datacenters</a> are complicated beasts, after all, so you don’t want to end up rushing your design and build just to hit an unrealistic date on the calendar.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware9c2f.jpg?width=75&amp;name=redapt-blog-hardware.jpg" alt="redapt-blog-hardware" width="335.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=38&amp;name=redapt-blog-hardware.jpg 38w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=75&amp;name=redapt-blog-hardware.jpg 75w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=113&amp;name=redapt-blog-hardware.jpg 113w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=150&amp;name=redapt-blog-hardware.jpg 150w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=188&amp;name=redapt-blog-hardware.jpg 188w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-hardware.jpg?width=225&amp;name=redapt-blog-hardware.jpg 225w" height="335.0" layout="responsive"></amp-img>2. Hardware</strong></h2>
+<p>Speaking of hardware … when you look beyond the design and selection of equipment, there are a number of easily overlooked dependencies when managing hardware.</p>
+<p>Logistics, in particular, can often lead to unexpected delays, as even the most reliable vendor can find its facility buried under the snow from that snowstorm we talked about earlier.</p>
+<p>In addition to that, equipment shortages occur regularly. And even traffic can severely impact a deployment when hardware inches from the vendor to its location.</p>
+<p>While many of these potential hindrances can be hard to predict, you can certainly mitigate their effects by working with an experienced engineering team. One that always has potential hiccups in mind when planning and designing a datacenter.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-softwarea5e8.jpg?width=75&amp;name=redapt-blog-software.jpg" alt="redapt-blog-software" width="335.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=38&amp;name=redapt-blog-software.jpg 38w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=75&amp;name=redapt-blog-software.jpg 75w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=113&amp;name=redapt-blog-software.jpg 113w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=150&amp;name=redapt-blog-software.jpg 150w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=188&amp;name=redapt-blog-software.jpg 188w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt-blog-software.jpg?width=225&amp;name=redapt-blog-software.jpg 225w" height="335.0" layout="responsive"></amp-img>3. Software</strong></h2>
+<p>Compared to hardware, software can be much easier to predict and deploy. That’s not to say it never presents challenges, however.</p>
+<p>Selection, for one, should be methodical and done in concert with the overall datacenter hardware design. Deploying software that doesn’t play well with your hardware can create major headaches, so it’s critical to conduct a thorough inventory of your needs before committing to a solution.</p>
+<p>Similarly, if one particular software you’re used to is increasing your operating costs, you should work with your engineering team to identify a potential replacement that will work for you. Sometimes the right solution is open source.</p>
+<p>At the end of the day, there are a lot of benefits from deploying your own datacenter at scale. Just go into it with your eyes open, and make sure your company works with a team that is long on experience and short on buzzwords.</p>
+<p>For more information on in-house datacenters, <span>download our free whitepaper,</span><a href="https://content.redapt.com/taking-the-leap-with-datacenters-wp" rel="noopener" target="_blank"><i><span> <span>Taking the Leap with On-Premises or Co-Location Datacenters</span></span></i></a><em>.</em></p>
+<p><span></span></p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="what-to-expect-when-deploying-datacenter-infrastructure-at-scale.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq184f.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=What+To+Expect+When+Deploying+Datacenter+Infrastructure+At+Scale&amp;pi=17915378354&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/what-to-expect-when-deploying-datacenter-infrastructure-at-scale?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:34 GMT -->
+</html>

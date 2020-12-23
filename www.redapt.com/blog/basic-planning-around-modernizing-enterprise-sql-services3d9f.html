@@ -1,0 +1,213 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/basic-planning-around-modernizing-enterprise-sql-services?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:39:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Basic Planning Around Modernizing Enterprise SQL Services</title>
+    <link rel="canonical" href="basic-planning-around-modernizing-enterprise-sql-services.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Jason Zeng and Bryan Gilcrease">
+
+    <meta name="description" content="Modernizing your SQL services requires a detailed strategy. In other words, it’s a marathon and not a sprint.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Basic Planning Around Modernizing Enterprise SQL Services",
+        "datePublished": "2020-09-16T20:13:04.812Z",
+        "dateModified": "2020-09-16T20:13:05.022Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/basic-planning-around-modernizing-enterprise-sql-services",
+        "author": {
+          "@type": "Person",
+          "name": "Jason Zeng and Bryan Gilcrease"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1081,
+          
+          "url": "https://f.hubspotusercontent10.net/hubfs/6151115/_illustrations/database-magnifying-glass_header.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="basic-planning-around-modernizing-enterprise-sql-services.html">Basic Planning Around Modernizing Enterprise SQL Services</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/jason-zeng-and-bryan-gilcrease.html">Jason Zeng and Bryan Gilcrease</a> | Sep 16, 2020 8:13:04 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>When it comes to modernizing SQL services, enterprises&nbsp; generally react to two factors: 1) a dramatic increase in available data and data sources and 2) the need to create a dispersed workforce requiring different types of access to SQL databases.</p>
+<p>The challenge in modernization, though, is the sheer amount of applications relying on an SQL database. Staging, migration, modernizing applications—taking these critical steps without creating interruptions to business is where enterprises often hit a wall.</p>
+<p>Still, breaking through that wall can be critical for your success. Let your infrastructure and applications age too long, and you can create risks for your entire operation. Unfortunately, many enterprises often wait until it’s too late.</p>
+<p><amp-img src="../hs-fs/hubfs/_photography/server-error-message9fab.png?width=1920&amp;name=server-error-message.png" alt="server-error-message" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=960&amp;name=server-error-message.png 960w, https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=1920&amp;name=server-error-message.png 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=2880&amp;name=server-error-message.png 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=3840&amp;name=server-error-message.png 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=4800&amp;name=server-error-message.png 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/server-error-message.png?width=5760&amp;name=server-error-message.png 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>So, how can an enterprise go through SQL services modernization the right way? How can they break through the wall? The key is to approach the modernization process as just that … <em>a process</em>.</p>
+<h2>Steps to starting SQL services modernization</h2>
+<p>Since data is the lifeblood of your business, understanding what data you have and where it comes from is the first place to start.</p>
+<p>This means creating a data catalogue with sources of truth for your various types of data and how that data is being used. During this cataloguing, you may find there is a lot of data you could be using but haven’t started doing so yet. Or maybe you’ll realize that a lot of data you’re capturing isn’t especially useful.</p>
+<p>You also need to examine where data is being accessed and, starting at an architectural level, figure out how your data needs to be backed up to ensure constant access and business continuity.</p>
+<p>Governance is also a critical component, since not knowing where your data goes and who can access it will prohibit you from having complete accountability of your data.</p>
+<p>Once you have a thorough understanding of your data environment, it’s time to examine your current SQL environment, including the state of your SQL servers and associated workloads.</p>
+<p><amp-img src="../hs-fs/hubfs/_photography/two-people-looking-at-screen15e7.jpg?width=1920&amp;name=two-people-looking-at-screen.jpg" alt="two-people-looking-at-screen" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=960&amp;name=two-people-looking-at-screen.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=1920&amp;name=two-people-looking-at-screen.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=2880&amp;name=two-people-looking-at-screen.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=3840&amp;name=two-people-looking-at-screen.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=4800&amp;name=two-people-looking-at-screen.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/two-people-looking-at-screen.jpg?width=5760&amp;name=two-people-looking-at-screen.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>You also need to inventory and classify your applications aligned to your SQL databases, particularly the connections, reporting, and ETL/ELT process.</p>
+<p>From there, it’s time to put together a near-term modernization plan and chart out your future needs of compute, storage, and software requirements. You will also want to have discussions with your teams or outside partners about specific questions, like whether or not to incorporate virtual SQL on VMWare, which could bring about higher utilization of all your resources and lead to greater efficiency.&nbsp;</p>
+<p>Or, if your SQL database is tied to a specific app, perhaps discussing whether to implement containerized workloads to better support a single function.</p>
+<p><span>Whatever shape your modernization process eventually takes, it’s important to remember that modernizing your SQL services is not an isolated discussion. </span>Data touches every corner of your organization, which means every corner should have a seat at the table when the modernization strategy is being put together.</p>
+<p>Modernizing SQL services requires a datacenter infrastructure that can handle high performance workloads. Download our free eBook to learn more about designing this infrastructure for your own organization.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="basic-planning-around-modernizing-enterprise-sql-services.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq0753.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Basic+Planning+Around+Modernizing+Enterprise+SQL+Services&amp;pi=34856459048&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/basic-planning-around-modernizing-enterprise-sql-services?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:39:17 GMT -->
+</html>

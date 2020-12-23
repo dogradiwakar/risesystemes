@@ -1,0 +1,229 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>A Guide to the Red Hat OpenShift Container Platform and Dell EMC Infrastructure</title>
+    <link rel="canonical" href="a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Advanced Data &amp; Analytics Team">
+
+    <meta name="description" content="Red Hat OpenShift can transform how your enterprise develops new products and services for your customers.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A Guide to the Red Hat OpenShift Container Platform and Dell EMC Infrastructure",
+        "datePublished": "2020-03-10T23:48:33Z",
+        "dateModified": "2020-09-03T00:32:47.462Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure",
+        "author": {
+          "@type": "Person",
+          "name": "Advanced Data & Analytics Team"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1880,
+          
+          
+          "height": 1251,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_photography/woman-reading-book-guide.jpeg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure.html">A Guide to the Red Hat OpenShift Container Platform and Dell EMC Infrastructure</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/advanced-data-analytics-team.html">Advanced Data & Analytics Team</a> | Mar 10, 2020 11:48:33 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Red Hat’s enterprise-ready Kubernetes platform, <a href="https://www.openshift.com/" rel="noopener" target="_blank">OpenShift</a>, has been designed to provide companies with the speed and power of cloud-based development on premises and in the cloud.</p>
+
+<p>This hybrid cloud solution offers enterprises a suite of tools for adopting <a href="managing-containers-on-openshift-vs-kubernetes.html" rel="noopener" target="_blank">Kubernetes</a>, regardless of where development takes place.</p>
+<p>In other words, <strong>OpenShift delivers all the flexibility of application development in the cloud without the need to always be in the cloud</strong>.</p>
+<h3><strong>Built to enhance Kubernetes</strong></h3>
+<p>The very foundation of Red Hat’s platform is Kubernetes, and what makes OpenShift special is how <a href="managing-containers-on-openshift-vs-kubernetes.html" rel="noopener" target="_blank">it’s designed to build on that foundation</a>. It includes the following tools:</p>
+<ul>
+<li>Prometheus and operation lifecycle management</li>
+<li>CI/CD pipelines and an embedded container registry</li>
+<li>Support from Red Hat’s world-class engineering team</li>
+</ul>
+<h6><span><a href="https://content.redapt.com/red-hat-openshift-ebook" rel="noopener" target="_blank"><span>Download Now: </span><em><span>Build More Applications, Faster</span></em></a></span></h6>
+<p>&nbsp;</p>
+<p>Each of these and other included tools work in concert with Kubernetes to bring flexibility to an enterprise.</p>
+<div>
+<h6><span>With OpenShift, you can remove dependencies that slow down development, prevent downtime by moving deployment to incremental releases, and reduce latency via the automated scaling of resources during peak times.</span></h6>
+</div>
+<h3>Built to make adoption of Kubernetes easier</h3>
+<p>Adopting traditional Kubernetes usually requires enterprises to assemble and integrate a dozen additional pieces to their development platforms.</p>
+<p>The additional expense, along with ongoing investment and the on-hand experience needed to get up and running, often inhibits enterprises from taking the leap.</p>
+<p>OpenShift, in contrast, is <a href="building-cloud-native-applications-with-openshift.html" rel="noopener" target="_blank">compatible wherever an enterprise runs infrastructure</a>, allowing developers to use the same software stacks and automation tools they’re used to.</p>
+<div>
+<h6><span>This drastically cuts down on the need for investment and training and frees up resources for developers to put the Kubernetes environment to work developing and deploying new products.</span></h6>
+</div>
+<h3>Built to work well with Dell EMC hardware</h3>
+<p>Red Hat has worked with Dell to develop tech stacks that help enterprises quickly start leveraging Kubernetes.</p>
+<p>These tech stacks include:</p>
+<ul>
+<li>Application stacks on-demand so you can utilize the languages and tools you want and deploy through container images.</li>
+<li>Simplified deployment via a simple click of a button or git push command.</li>
+<li>Support for multiple environments—on premises, the cloud, hybrid—along with automated release management.</li>
+</ul>
+<p>For the full story on how OpenShift can help your enterprise, download our free eBook <a href="https://content.redapt.com/red-hat-openshift-ebook" rel="noopener" target="_blank"><em>Build More Applications, Faster</em></a>. Alternatively, <a href="https://content.redapt.com/the-full-guide-to-enterprise-devops" rel="noopener" target="_blank">click here to read our complete guide to enterprise DevOps.</a></p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqa3a9.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=A+Guide+to+the+Red+Hat+OpenShift+Container+Platform+and+Dell+EMC+Infrastructure&amp;pi=26740995633&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/a-guide-to-the-red-hat-openshift-container-platform-and-dell-emc-infrastructure?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:05 GMT -->
+</html>

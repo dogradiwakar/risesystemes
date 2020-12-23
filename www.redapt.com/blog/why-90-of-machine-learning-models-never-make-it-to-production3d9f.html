@@ -1,0 +1,256 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/why-90-of-machine-learning-models-never-make-it-to-production?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:38:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Why 90% of Machine Learning Models Never Make it to Production</title>
+    <link rel="canonical" href="why-90-of-machine-learning-models-never-make-it-to-production.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="There’s a lot of potential in Machine Learning (ML). Unfortunately, there are also a number of obstacles companies hit when it comes to realizing that potential.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Why 90% of Machine Learning Models Never Make it to Production",
+        "datePublished": "2019-12-09T17:41:33Z",
+        "dateModified": "2020-12-09T22:35:29.353Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/why-90-of-machine-learning-models-never-make-it-to-production",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_other-graphics/19.11_workflow-strategy_redapt_blog-graphics_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="why-90-of-machine-learning-models-never-make-it-to-production.html">Why 90% of Machine Learning Models Never Make it to Production</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Dec 9, 2019 5:41:33 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>There’s a lot of potential in <a href="https://content.redapt.com/guide-to-ai-adoption" rel="noopener" target="_blank">Machine Learning (ML)</a>. Unfortunately, there are also a number of obstacles companies hit when it comes to realizing that potential.</p>
+
+<p><a href="https://venturebeat.com/2019/07/19/why-do-87-of-data-science-projects-never-make-it-into-production/" rel="noopener" target="_blank">During a panel</a> at last summer’s Transform 2019 conference, it was pointed out that nearly 90% of ML models cooked up by data scientists never actually make it into production.</p>
+<h2>Why do ML projects fail?&nbsp;</h2>
+<p>Why is this the case? Why are one in ten ML projects doomed to failure? There are a couple of reasons.</p>
+<p>One is that <strong>the technology is new</strong>, and most IT organizations are simply unfamiliar with the software tools and specialized hardware, such as Nvidia GPUs, that are required to effectively deploy ML models.</p>
+<p>The other reason is <strong>the disconnect between IT and data science</strong>. IT tends to stay focused on making things available and stable. They want uptime at all costs. Data scientists, on the other hand, are focused on iteration and experimentation. They want to break things.</p>
+<div>
+  <amp-img class="vidyard-player-embed" src="../../cdn.vidyard.com/thumbnails/la3kX2aYWClmN9anJIAGaA/da53e3b14da4efcee26740.jpg" width="1920" height="1080" alt="19.12.09_machine-learning-models-never-make-it_Paul-W_redapt" layout="responsive"></amp-img>
+
+</div>
+
+<p>&nbsp;</p>
+<p>Learn more about your path to AI/ML adoption by reading our FREE in-depth guide, <a href="https://content.redapt.com/accelerating-your-success-with-artificial-intelligence-and-machine-learning" rel="noopener" target="_blank"><em>&nbsp;Accelerating Your Success with Artificial Intelligence and Machine Learning</em></a>.</p>
+<h2><strong>Enter Kubeflow</strong></h2>
+<blockquote>
+<p><em>[Kubeflow] won’t be of much use unless companies looking to unlock the potential of ML address their biggest hurdle: not understanding where they're at in their technological evolution.</em></p>
+</blockquote>
+<p>Originally developed by Google, <a href="https://www.kubeflow.org/" rel="noopener" target="_blank">Kubeflow</a> is an open-source project designed to facilitate the end-to-end process of developing and deploying ML models.</p>
+<p><span>Kubeflow sits atop Kubernetes in your development workflow, providing data scientists with a self-service playground to conduct ML model experiments. Then, once those experiments are completed, it packages the model up and publishes it in a way that can be used by production systems.</span></p>
+<p>Right now, it's still in its infancy — <a href="https://analyticsindiamag.com/kubeflow-v1-2-released-all-the-features-introduced/" rel="noopener" target="_blank">Kubeflow V1.2 was just released</a> in November of 2020. But some companies have already put it to work, and so far the results are promising.</p>
+<p>But while Kubeflow is a tool that can potentially solve the ML deployment problem, it won’t be of much use unless companies looking to unlock the potential of ML address their biggest hurdle<strong>: not understanding where they're at in their <a href="https://content.redapt.com/hit-the-mark-with-modernization" rel="noopener" target="_blank">technological evolution</a>.</strong></p>
+<h3><strong>Benefits of Kubeflow</strong></h3>
+<p><amp-img src="../hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_11004.jpg?width=115&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg" alt="19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1" width="451.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=58&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 58w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=115&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 115w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=173&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 173w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=230&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 230w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=288&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 288w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg?width=345&amp;name=19.11_kubeflow-with-checkmarks_redapt_blog-graphics_1.jpg 345w" height="451.0" layout="responsive"></amp-img>If you have a large organization looking to grow your ML capabilities, Kubeflow can help make the process much easier.</p>
+<p>For data scientists working on ML models, it provides them with a self-service environment for experimentation.</p>
+<p>It also accelerates their ability to take those models and publish them to a production environment by managing the workflow — packaging the model, pushing it out in clusters, and making it available to use by other applications.</p>
+<p>Outside of data science, Kubeflow facilitates the training of ML models by taking a known set of data and output results and sending it through a model so that it can learn.</p>
+<p><strong>ML is different than the traditional software development life cycle process in that once a model is developed and ready to use, there are different steps beyond the usual packaging and deployment.</strong></p>
+<p>These steps include feedback on how the model is running in production and how accurate a model’s results are—necessary measures to help a ML model learn.</p>
+<p>Before Kubeflow, these steps were often outside of most IT capabilities, and as a result, projects often stalled before they could be completed. That’s starting to change.</p>
+<h3><strong>Features of Kubeflow</strong></h3>
+<p><amp-img src="../hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1ef02.jpg?width=130&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg" alt="19.11_kubeflow-with-others_redapt_blog-graphics_1" width="451.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=65&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 65w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=130&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 130w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=195&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 195w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=260&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 260w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=325&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 325w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg?width=390&amp;name=19.11_kubeflow-with-others_redapt_blog-graphics_1.jpg 390w" height="451.0" layout="responsive"></amp-img>Kubeflow is not really a single product, but more of a collection of tools working in concert to make scaling and deploying ML models easier and more efficient. With it, you can put to work:</p>
+<ul>
+<li><a href="https://jupyter.org/" rel="noopener" target="_blank">Jupyter notebooks</a> for experimentation and sharing</li>
+<li><a href="https://github.com/kubeflow/katib" rel="noopener" target="_blank">Katib</a> for tuning hyperparameters on Kubernetes</li>
+<li><a href="https://github.com/kubeflow/pipelines" rel="noopener" target="_blank">Kubeflow Pipelines</a> for building and deploying ML workflows based on containers</li>
+<li>Tracking of metadata of ML workflows</li>
+<li><a href="https://nuclio.io/" rel="noopener" target="_blank">Nuclio</a> functions for serverless data processing and ML</li>
+</ul>
+<p>Kubeflow is still in its infancy, but its promise for increased innovation in the ML space is already clear. As more and more companies become familiar with it, more and more ML projects are going to reach the finish line.</p>
+<p>Looking to increase your company’s ML capabilities and presence in the cloud? Download our free eBook, <em><a href="https://content.redapt.com/applying-the-technical-maturity-framework-when-going-cloud-native-ebook" rel="noopener" target="_blank">3 Simple Steps to Applying the Technical Maturity Framework When Going Cloud-Native</a>.</em></p>
+<div>For a technical introduction to ML pipelines with Kubeflow and to learn <span>how to install Kubeflow with ease</span>, check out <a href="https://rancher.com/blog/2020/introduction-to-machine-learning-pipeline#.XsWECv_5-UQ.linkedin" rel="noopener" target="_blank">this blog post</a> from our partner, Rancher.</div>
+<div>&nbsp;</div>
+<h2><strong>Enter the Technology Evolution Playbook</strong></h2>
+<h2><strong><amp-img src="../hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1dc6c.jpg?width=3643&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg" alt="19.11_technical-maturity-framework_redapt_blog-graphics_1" width="3643.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=1822&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 1822w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=3643&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 3643w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=5465&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 5465w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=7286&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 7286w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=9108&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 9108w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg?width=10929&amp;name=19.11_technical-maturity-framework_redapt_blog-graphics_1.jpg 10929w" height="1112.0" layout="responsive"></amp-img></strong></h2>
+<p>Effectively putting ML to work means understanding a number of technical variables, including from the outset, things like:</p>
+<ul>
+<li>Where your data is currently located</li>
+<li>Whether that data is clean</li>
+<li>What data you need from elsewhere in order to drive your ML process</li>
+<li>Where your ML workloads will be running</li>
+</ul>
+<p>Getting to the bottom of these and other variables requires using a technical maturity framework. Without knowing whether you are even ready to utilize ML, you’re going to go nowhere fast.</p>
+<p><a href="https://content.redapt.com/hit-the-mark-with-modernization" rel="noopener" target="_blank">The Redapt Technology Evolution Playbook</a>&nbsp;will help you nail down exactly what your business is trying to achieve, and whether actually using something like ML makes sense in the first place.</p>
+<h2><strong>So what’s the solution to the ML model problem?</strong></h2>
+<p>There’s no <em>one</em> solution for the logjam between data science ML models and production—at least not yet. But there are steps that can improve the percentage of models making it to deployment.</p>
+<p>One of those steps is Kubeflow, which is tailor made for making it easier to deploy ML across the board.</p>
+<p><strong>The other step—the one every company looking to utilize ML can take right now—is to thoroughly assess their technical maturity.</strong></p>
+<p>That way, they can get a handle on their current capabilities, learn whether ML is even something they need to pursue, and pinpoint ways to bridge the gap between how data scientists dream up ML models and IT puts those models to work.</p>
+<p>If you’re interested in learning more about ML and assessing the technical evolution of your business, <a href="https://content.redapt.com/tech-maturity-model-ebook" rel="noopener" target="_blank">download our free eBook</a> <em>The Redapt Technical Maturity Framework</em>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="why-90-of-machine-learning-models-never-make-it-to-production.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqf2d1.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Why+90%25+of+Machine+Learning+Models+Never+Make+it+to+Production&amp;pi=22831103737&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/why-90-of-machine-learning-models-never-make-it-to-production?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:38:45 GMT -->
+</html>
