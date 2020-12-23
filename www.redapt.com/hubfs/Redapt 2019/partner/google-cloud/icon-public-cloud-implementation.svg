@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154.124" height="120.401" viewBox="0 0 154.124 120.401">
+  <g id="Public_Cloud_Implementation" data-name="Public Cloud Implementation" transform="translate(77.062 60.201)">
+    <g id="Group_934" data-name="Group 934" transform="translate(-77.062 -60.201)">
+      <path id="Path_2331" data-name="Path 2331" d="M46.9,36.1" transform="translate(52.652 39.093)" fill="none" stroke="#00576f" stroke-miterlimit="56" stroke-width="5"/>
+      <path id="Path_2332" data-name="Path 2332" d="M107.678,18.228A43.116,43.116,0,0,0,29.819,37.9a31.843,31.843,0,1,0,2.721,63.627H53.888a33.278,33.278,0,0,1-5.023-10.465H32.539a21.453,21.453,0,1,1,0-42.906h1.674l5.651.419V42.925a32.651,32.651,0,0,1,60.7-16.535l1.884,3.139L106,28.9l5.232-.419a31.2,31.2,0,1,1,1.884,62.371A33.279,33.279,0,0,1,108.1,101.32h3.14a41.651,41.651,0,1,0-3.558-83.092Z" transform="translate(0.664 -0.174)" fill="#00576f"/>
+      <path id="Path_2333" data-name="Path 2333" d="M58.62,98.141a38.72,38.72,0,1,1,38.72-38.72A38.72,38.72,0,0,1,58.62,98.141Zm0-66.976A28.255,28.255,0,1,0,86.876,59.42,28.255,28.255,0,0,0,58.62,31.165Z" transform="translate(23.141 22.26)" fill="#00576f"/>
+      <path id="Path_2334" data-name="Path 2334" d="M44.688,63.386,29.2,47.688l7.325-7.325,8.163,8.163L61.014,32.2l7.535,7.535Z" transform="translate(33.306 34.83)" fill="#00576f"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Adopting Enterprise-Grade Container Orchestration on Your Infrastructure</title>
+    <link rel="canonical" href="kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="After architecting your container orchestration platform and integrating it into your environment, important technology decisions are to be made.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Adopting Enterprise-Grade Container Orchestration on Your Infrastructure",
+        "datePublished": "2018-08-21T00:00:00Z",
+        "dateModified": "2020-08-31T22:06:06.502Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/5b5f43db91ad16103b1bdc4c_RDPT-049002_Blog_2_Adopting_Containers.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-vimeo" src="../../cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script><script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know.html">Adopting Enterprise-Grade Container Orchestration on Your Infrastructure</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Aug 21, 2018 12:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>It's difficult to get started with cloud-native applications until you've addressed some key issues - organizational and cultural - that lie outside of technology.</p>
+
+<p>But once you reach the point of architecting your container orchestration platform and integrating it into your environment, important technology decisions are to be made.</p>
+<p>Your options for container orchestration have simplified over the past few years. Kubernetes has risen as the clear market leader, though Docker Swarm, Apache Mesos and others still have their use cases.</p>
+<p>So, let's assume you choose Kubernetes as your container orchestrator. What's the best way to deploy it in your environment? For enterprises with a VMware-based environment, we usually recommend <a href="https://kubernetesonvmware.com/" target="_blank" rel="noopener">Pivotal Container Service (PKS)</a>. PKS is a simple way to deploy and operate production-ready Kubernetes on VMware vSphere and Google Cloud Platform. Pivotal describes it as "built for day-two operations."</p>
+
+<div>
+<div class="hs-responsive-embed-wrapper hs-responsive-embed">
+<div class="hs-responsive-embed-inner-wrapper"><amp-vimeo class="hs-responsive-embed-iframe" width="16" height="9" data-videoid="266702167" layout="responsive"></amp-vimeo></div>
+</div>
+</div>
+
+<h2><strong>Why We Recommend PKS for Enterprise-Grade Kubernetes</strong></h2>
+<p><strong>Leverage your existing VMware investments - technology and skills.</strong> One of the biggest benefits of PKS is its seamless integration with a VMware-based environment. That means you can quickly adopt Kubernetes without a costly and disruptive migration to a new platform that requires new training or new people to manage it.</p>
+<p><strong>Your IT ops team can get behind it.</strong> PKS lets IT operations deploy and consume Kubernetes on-premises using VMware vSphere. They are reassured with infrastructure stability, control, and continuity as the organization makes a push into containerization and cloud-native.</p>
+<p><strong>Your developers will like it, too.</strong> Most application development teams, today, simply want Kubernetes - regardless of where it lives. PKS gives them native access to Google Cloud services, a Kubernetes "dial tone" without the burden of managing it, and integration with their familiar dev and test tools - all contributing to faster dev cycles.</p>
+<h2><strong>Low-Friction Kubernetes Adoption</strong></h2>
+<p>Put simply, PKS is a low-friction path to enterprise-grade Kubernetes and all the benefits of containers and cloud-native practices.</p>
+<p>Learn more about <a href="https://kubernetesonvmware.com/" target="_blank" rel="noopener">how PKS brings enterprise-grade Kubernetes to VMware-based environments</a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq05a7.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Adopting+Enterprise-Grade+Container+Orchestration+on+Your+Infrastructure&amp;pi=12155671052&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/kubernetes-vmware-how-to-adopt-enterprise-grade-container-orchestration-on-the-infrastructure-you-know?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:51:22 GMT -->
+</html>

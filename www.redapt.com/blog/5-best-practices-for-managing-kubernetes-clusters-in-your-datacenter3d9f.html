@@ -1,0 +1,219 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>5 Best Practices for Managing Kubernetes Clusters in Your Datacenter</title>
+    <link rel="canonical" href="5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Jerry Meisner">
+
+    <meta name="description" content="Here’s how you can manage Kubernetes in your datacenter the right way.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "5 Best Practices for Managing Kubernetes Clusters in Your Datacenter",
+        "datePublished": "2020-04-08T16:00:00Z",
+        "dateModified": "2020-08-31T21:28:24.853Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter",
+        "author": {
+          "@type": "Person",
+          "name": "Jerry Meisner"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_illustrations/grid-header.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-iframe" src="../../cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter.html">5 Best Practices for Managing Kubernetes Clusters in Your Datacenter</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/jerry-meisner.html">Jerry Meisner</a> | Apr 8, 2020 4:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>For enterprises dependent upon on-premises datacenters, effectively <a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-guide" rel="noopener" target="_blank">managing development clusters with Kubernetes</a> has its own challenges. While these challenges can certainly be overcome, not addressing them early on in your Kubernetes adoption process can lead to major issues down the road.</p>
+<p>Here are five steps every enterprise should take before attempting to utilize Kubernetes in their datacenter:</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation6748.png?width=80&amp;name=redapt_blog-graphics_automation.png" alt="redapt_blog-graphics_automation" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=40&amp;name=redapt_blog-graphics_automation.png 40w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=80&amp;name=redapt_blog-graphics_automation.png 80w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=120&amp;name=redapt_blog-graphics_automation.png 120w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=160&amp;name=redapt_blog-graphics_automation.png 160w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=200&amp;name=redapt_blog-graphics_automation.png 200w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=240&amp;name=redapt_blog-graphics_automation.png 240w" height="167.0"></amp-img>1. Choose the right cluster orchestrator</strong></h2>
+<p>Selecting and familiarizing yourself with the right cluster orchestrator to fit your needs is critical. Not only will it make standup and managing additional clusters feasible, it will provide you with a uniform process and general overview to downstream clusters.</p>
+<p>As for which orchestrators we recommend, it depends on the roadmap of the client. If your roadmap includes the cloud in a hybrid solution, we suggest <a href="why-google-anthos-is-a-multi-cloud-gamechanger-for-enterprises.html">Google Anthos</a>—especially if the <a href="../partners/google-cloud.html">Google Cloud Platform (GCP)</a> is your chosen platform—or <a href="../partners/rancher.html">Rancher</a>. For strictly on-premises, the Pivotal Kubernetes Engine (PKE) is usually the way to go.</p>
+<amp-iframe width="300" height="100" layout="responsive" resizable sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-forms" src="https://amp.hubspot.net/_hcms/cta?portalId=6151115&amp;ctaGuid=096b8364-1cc2-4cc6-82c4-04c676a4d725&amp;analyticsPageId=27981408143&amp;contentType=blog-post&amp;referrerUrl=https://www.redapt.com/blog/5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter?hs_amp%3Dtrue">
+  <amp-img layout="fixed" height="25" width="25" class="iframe-placeholder" src="../hs/hsstatic/content_shared_assets/static-1.4092/img/iframe-expand.png" placeholder overflow></amp-img>
+</amp-iframe>
+<h2><strong><amp-img src="../hs-fs/hubfs/_icons/nodese4bf.jpg?width=80&amp;name=nodes.jpg" alt="nodes" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=40&amp;name=nodes.jpg 40w, https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=80&amp;name=nodes.jpg 80w, https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=120&amp;name=nodes.jpg 120w, https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=160&amp;name=nodes.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=200&amp;name=nodes.jpg 200w, https://www.redapt.com/hs-fs/hubfs/_icons/nodes.jpg?width=240&amp;name=nodes.jpg 240w" height="81.0"></amp-img>2. Have a plan for nodes</strong></h2>
+<p>When employing Kubernetes in your datacenter, make sure your nodes are replaceable because utilizing worker nodes for storing files, configuration, and persistent data pods is a recipe for easy failure.</p>
+<p>Overall, your pods should never depend on the underlying hardware they run on, but rather, they should be capable of running on any worker node in the cluster.</p>
+<p>Achieving this mostly entails making sure that workloads are not mounting anything from the underlying host, so that if pods are moved to another host they will be able to be put back up.</p>
+<p><a href="https://content.redapt.com/cloud-native-solutions" rel="noopener" target="_blank">Click here to read our free guide on managing and building cloud native solutions on-premises.</a></p>
+<h2><strong><amp-img src="../hs-fs/hubfs/_icons/upgrade-up-arrow70ba.jpg?width=80&amp;name=upgrade-up-arrow.jpg" alt="upgrade-up-arrow" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=40&amp;name=upgrade-up-arrow.jpg 40w, https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=80&amp;name=upgrade-up-arrow.jpg 80w, https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=120&amp;name=upgrade-up-arrow.jpg 120w, https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=160&amp;name=upgrade-up-arrow.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=200&amp;name=upgrade-up-arrow.jpg 200w, https://www.redapt.com/hs-fs/hubfs/_icons/upgrade-up-arrow.jpg?width=240&amp;name=upgrade-up-arrow.jpg 240w" height="81.0"></amp-img>3. Develop an upgrade strategy</strong></h2>
+<p>Due to being open-source, Kubernetes is always experiencing changes brought about by the community. This is part of why the solution is so powerful, but it also means that being able to upgrade without downtime is critical for your success.</p>
+<p>Cloud providers generally provide an upgrade mechanism for managed clusters. But for your on-premises datacenter, you want to make sure you have a patch and upgrades strategy in place and that you use that strategy to test upgrades often and early.</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/_icons/back-up-recoverye2d2.jpg?width=80&amp;name=back-up-recovery.jpg" alt="back-up-recovery" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=40&amp;name=back-up-recovery.jpg 40w, https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=80&amp;name=back-up-recovery.jpg 80w, https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=120&amp;name=back-up-recovery.jpg 120w, https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=160&amp;name=back-up-recovery.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=200&amp;name=back-up-recovery.jpg 200w, https://www.redapt.com/hs-fs/hubfs/_icons/back-up-recovery.jpg?width=240&amp;name=back-up-recovery.jpg 240w" height="81.0"></amp-img>4. Develop backup procedures</strong></h2>
+<p>In the unlikely event that your ETCD cluster loses quorum, or the underlying VMs are lost, it’s important to have a backup of your data.</p>
+<p>In order to be able to restore the previous state, you should set up a backup routine that occurs regularly, depending on how much retention is necessary and how often ETCD data changes via API calls.&nbsp;</p>
+<h2><strong><amp-img src="../hs-fs/hubfs/_icons/server-with-check1457.jpg?width=80&amp;name=server-with-check.jpg" alt="server-with-check" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=40&amp;name=server-with-check.jpg 40w, https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=80&amp;name=server-with-check.jpg 80w, https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=120&amp;name=server-with-check.jpg 120w, https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=160&amp;name=server-with-check.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=200&amp;name=server-with-check.jpg 200w, https://www.redapt.com/hs-fs/hubfs/_icons/server-with-check.jpg?width=240&amp;name=server-with-check.jpg 240w" height="81.0"></amp-img>5. Find the hardware that works best for you</strong></h2>
+<p>In general, we are agnostic when it comes to hardware, so for managing Kubernetes in your datacenter, we recommend sticking with the hardware you’re most comfortable with.</p>
+<p>One recommendation we <i>do</i> often make, however, is that for those enterprises that choose Anthos and GCP for Kubernetes, Dell EMC HCI hardware provides an integrated platform tailored to help you get the most out of Anthos as an orchestrator.</p>
+<p>Learn more about managing your Kubernetes clusters on-premises by reading our free guide, <a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-download" rel="noopener" target="_blank"><em>The Recipe for</em> </a><i><a href="https://content.redapt.com/deploying-managed-kubernetes-on-premises-download" rel="noopener" target="_blank" id="__hsNewLink">Deploying Managed Kubernetes On-Premises</a>.</i></p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq627e.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=5+Best+Practices+for+Managing+Kubernetes+Clusters+in+Your+Datacenter&amp;pi=27981408143&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/5-best-practices-for-managing-kubernetes-clusters-in-your-datacenter?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:01 GMT -->
+</html>

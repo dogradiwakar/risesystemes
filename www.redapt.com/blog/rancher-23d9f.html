@@ -1,0 +1,214 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/rancher-2.3-brings-kubernetes-benefits-to-microsoft-windows-applications?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Rancher 2.3 Brings Kubernetes Benefits to Microsoft Windows Applications</title>
+    <link rel="canonical" href="rancher-2.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="With the addition of Rancher 2.3, you can now run Windows workloads with confidence, and integration of Istio service mesh brings with it built-in support for tools like Kiali dashboards, Jaeger, and Prometheus and Grafana.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rancher 2.3 Brings Kubernetes Benefits to Microsoft Windows Applications",
+        "datePublished": "2019-11-25T17:00:00Z",
+        "dateModified": "2020-07-15T18:48:00.080Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/rancher-2.3-brings-kubernetes-benefits-to-microsoft-windows-applications",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/2019.11/redapt_blog-graphics_rancher-logo-on-redapt-background.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="rancher-2.html">Rancher 2.3 Brings Kubernetes Benefits to Microsoft Windows Applications</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Nov 25, 2019 5:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Last month, a <a href="https://www.businesswire.com/news/home/20191008005672/en/Rancher-2.3-Brings-Kubernetes-Benefits-Microsoft-Windows" rel="noopener" target="_blank">release on Business Wire</a> caught our eye. Here’s how it starts, emphasis ours:</p>
+
+<blockquote><em>Rancher Labs, creators of the industry’s most widely adopted Kubernetes management platform, today announced the general availability of Rancher 2.3. <strong>The latest release of their flagship product includes support for Windows containers, integration of Istio service mesh, and new cluster templates that provide enhanced security for large scale deployments of Kubernetes</strong>.</em></blockquote>
+<p>As longtime supporters of Rancher, this was exciting news. Creating general availability with Windows—and being the first to do it is a huge milestone for the company and development as a whole.</p>
+<p>With this addition, you can now run Windows workloads with confidence, and integration of Istio service mesh brings with it built-in support for tools like Kiali dashboards, Jaeger, and Prometheus and Grafana.</p>
+<p>There’s also the added level of security for Kubernetes—security that is both innovative and robust. This is especially crucial for organizations that are running multiple clusters at a time.</p>
+<p>Hence the introduction of Rancher 2.3’s cluster templates. According to the release,</p>
+<blockquote>
+<p>cluster templates help organizations reduce risk by enabling them to enforce consistent cluster configurations across their entire infrastructure.</p>
+</blockquote>
+<p>&nbsp;</p>
+<p>So, what do cluster templates unlock for organizations with major security concerns? Two things:</p>
+<ol>
+<li>Confidence saving, creating, and even reusing Kubernetes configurations across multiple cluster deployments due to rigorous testing</li>
+<li>No more improper configurations through strict enforcement, as these can lead to high-risk security issues over time</li>
+</ol>
+<p>Rancher was already one of our go-to services, but with 2.3 and its Kubernetes support, it’s better than ever. Being able to control all your clusters across managed Kubernetes, public cloud IaaS, and in your own data center in mixed Linux and Windows workloads is a definite game-changer.</p>
+<p>You can check out the full Rancher 2.3 release <a href="https://finance.yahoo.com/news/rancher-2-3-brings-kubernetes-150000890.html" rel="noopener" target="_blank">at Business Wire</a>. And for more on unlocking the benefits of Kubernetes and DevOps for your business, download our free eBook <em><a href="https://content.redapt.com/tech-maturity-model-ebook" rel="noopener" target="_blank">The Redapt Technical Maturity Framework</a>.</em></p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="rancher-2.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqf020.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Rancher+2.3+Brings+Kubernetes+Benefits+to+Microsoft+Windows+Applications&amp;pi=21487669833&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/rancher-2.3-brings-kubernetes-benefits-to-microsoft-windows-applications?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:21 GMT -->
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/a-prime-example-of-a-large-scale-deployment-and-best-practices?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>A Prime Example of a Large Scale Deployment (And Best Practices)</title>
+    <link rel="canonical" href="a-prime-example-of-a-large-scale-deployment-and-best-practices.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Edward Egger">
+
+    <meta name="description" content="For large scale deployments during a pandemic, you need a process that can be accelerated as needed.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A Prime Example of a Large Scale Deployment (And Best Practices)",
+        "datePublished": "2020-08-04T15:00:00Z",
+        "dateModified": "2020-08-18T00:03:10.673Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/a-prime-example-of-a-large-scale-deployment-and-best-practices",
+        "author": {
+          "@type": "Person",
+          "name": "Edward Egger"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1080,
+          
+          "url": "https://f.hubspotusercontent10.net/hubfs/6151115/_other-graphics/server_redapt_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="a-prime-example-of-a-large-scale-deployment-and-best-practices.html">A Prime Example of a Large Scale Deployment (And Best Practices)</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/edward-egger.html">Edward Egger</a> | Aug 4, 2020 3:00:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>When the COVID-19 pandemic hit, one of our customers was dramatically affected by the sudden influx of remote work.</p>
+<p>This company provided video conferencing services, and as the shutdowns spread they saw demand for their service increase at a startling rate.</p>
+<p>Redapt had already been working with the company prior to the pandemic, but that work greatly scaled up as shutdowns began. Infrastructure deployments almost immediately went from a marathon to a sprint as the company worked to keep up with the unprecedented surge in demand.</p>
+<p>At the same time, the pandemic was severely interrupting supply chains globally. Not just for large scale equipment like servers and switches, but even smaller—yet just as critical—components like cabling.</p>
+<h2><strong>Accelerating the deployment of infrastructure at scale</strong></h2>
+<p>In order to help the company address these and other challenges on a severely compressed timeline, we relied on our best practices for deploying infrastructure at scale.</p>
+<p><amp-img src="../hs-fs/hubfs/_photography/person-working-on-server-cables_wided3e8.jpg?width=1920&amp;name=person-working-on-server-cables_wide.jpg" alt="person-working-on-server-cables_wide" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=960&amp;name=person-working-on-server-cables_wide.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=1920&amp;name=person-working-on-server-cables_wide.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=2880&amp;name=person-working-on-server-cables_wide.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=3840&amp;name=person-working-on-server-cables_wide.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=4800&amp;name=person-working-on-server-cables_wide.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/person-working-on-server-cables_wide.jpg?width=5760&amp;name=person-working-on-server-cables_wide.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>By working with our supply chain and logistics partners, we were able to fulfill expedited orders of hardware and components. Meanwhile, we accelerated the three phases we normally employ for deploying infrastructure at scale.</p>
+<p>These phases are:</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench7ba6.png?width=80&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png" alt="redapt_icon-build-develop-diy-hammer-wrench" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=40&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 40w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=80&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 80w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=120&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 120w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=160&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 160w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=200&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 200w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_icon-build-develop-diy-hammer-wrench.png?width=240&amp;name=redapt_icon-build-develop-diy-hammer-wrench.png 240w" height="167.0"></amp-img>Phase 1: Design</strong></h3>
+<p>After working to understand the specific needs of a client, we set about value engineering them a solution.</p>
+<p>This includes everything from identifying and procuring the right hardware and components, to a robust production schedule that provides continuous updates on vendors, logistics, and parts delivery. Even the design and shipping of nuts and screws are kept track of throughout the process.</p>
+<p>The goal of this first phase is to have all the pieces in place to quickly turn around the infrastructure the client needs as soon as all the pieces arrive.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/rack-integration_icon3d72.jpg?width=81&amp;name=rack-integration_icon.jpg" alt="rack-integration_icon" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=41&amp;name=rack-integration_icon.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=81&amp;name=rack-integration_icon.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=122&amp;name=rack-integration_icon.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=162&amp;name=rack-integration_icon.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=203&amp;name=rack-integration_icon.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/rack-integration_icon.jpg?width=243&amp;name=rack-integration_icon.jpg 243w" height="81.0"></amp-img>Phase 2: Procurement &amp; testing</strong></h3>
+<p>All equipment and components are shipped directly to our facilities where we perform light integration.</p>
+<p>Every piece of equipment and software is configured and thoroughly tested by our teams. Then the racks are assembled, complete with cabling, and the system information detailed so that the client can access the information via API and import it to their system.</p>
+<p>Once all this is done, the racks are then repackaged and shipped to their destination.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/installation-scale-plug_icondc55.jpg?width=80&amp;name=installation-scale-plug_icon.jpg" alt="installation-scale-plug_icon" width="80.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=40&amp;name=installation-scale-plug_icon.jpg 40w, https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=80&amp;name=installation-scale-plug_icon.jpg 80w, https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=120&amp;name=installation-scale-plug_icon.jpg 120w, https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=160&amp;name=installation-scale-plug_icon.jpg 160w, https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=200&amp;name=installation-scale-plug_icon.jpg 200w, https://www.redapt.com/hs-fs/hubfs/_icons/installation-scale-plug_icon.jpg?width=240&amp;name=installation-scale-plug_icon.jpg 240w" height="81.0"></amp-img>Phase 3: Arrival &amp; installation</strong></h3>
+<p>For clients that don’t have their own staff at a datacenter, we offer a “white glove” delivery service that meets the shipment at the facility. From there, we place the racks, connect it to power, and configure the networking so it’s ready to turn over to the operations team.</p>
+<p>Afterwards, we collect all the refuse and recyclable materials so all the client has to do is integrate their new infrastructure into their systems and go.</p>
+<h2><strong>Designed for quality and efficiency</strong></h2>
+<p>Our goal with every large scale deployment is to deliver a high-quality product efficiently. While this specific company’s needs during the pandemic were certainly an outlier, we were able to meet its demands by expediting our proven process rather than skipping steps to save time.</p>
+<p>As a result, the company was able to scale successfully to meet the flood of new users without having to spend a massive amount of time and resources building out their own capabilities.</p>
+<p><a href="../capabilities/rack-integration.html" rel="noopener" target="_blank">Click here&nbsp;</a>to learn more about how Redapt can help you deploy new infrastructure at scale efficiently.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="a-prime-example-of-a-large-scale-deployment-and-best-practices.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq2183.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=A+Prime+Example+of+a+Large+Scale+Deployment+%28And+Best+Practices%29&amp;pi=33086542937&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/a-prime-example-of-a-large-scale-deployment-and-best-practices?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:49:35 GMT -->
+</html>

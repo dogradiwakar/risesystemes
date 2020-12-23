@@ -1,0 +1,251 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/making-the-move-to-microservices?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:45:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Making the Move to Microservices</title>
+    <link rel="canonical" href="making-the-move-to-microservices.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Dustin Clarkson &amp; Paul Welch">
+
+    <meta name="description" content="Before you can realize the benefits of microservices, you need to know how to adopt them.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Making the Move to Microservices",
+        "datePublished": "2020-04-14T17:15:00Z",
+        "dateModified": "2020-10-05T23:37:58.829Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/making-the-move-to-microservices",
+        "author": {
+          "@type": "Person",
+          "name": "Dustin Clarkson & Paul Welch"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1920,
+          
+          
+          "height": 1081,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_illustrations/microservices-header.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="making-the-move-to-microservices.html">Making the Move to Microservices</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/dustin-clarkson-paul-welch.html">Dustin Clarkson & Paul Welch</a> | Apr 14, 2020 5:15:00 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>The rise of modern development practices—<a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">microservices</a>, DevOps, containers, et al.—has dramatically changed how applications are designed, developed, and delivered.</p>
+
+<p>The ability to cast aside the old, monolithic way of development in favor of bite-sized workloads that can be worked on independently regardless of platform or favored tools, comes with a number of benefits for enterprises. These include:</p>
+<ul>
+<li>Reduced costs in IT services and maintenance</li>
+<li>Accelerated development and deployment</li>
+<li>More scalability and resilience for mission-critical applications within network and deployment pipelines</li>
+<li>Greater flexibility in how applications are developed</li>
+</ul>
+<p><a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">Read Now: The Complete Guide to Microservices Architecture for Enterprises</a></p>
+<p>Due to these and other benefits, <strong>it’s no wonder more and more enterprises are making the shift to microservices and modern development practices</strong>. One question these enterprises often face, though, is how to successfully <i>make</i> that shift.</p>
+<h2>3 advantages of microservices</h2>
+<p>In many industries,<span>&nbsp;</span><strong>typical software release cycles are still averaging between nine and 18 months</strong>. This in incredibly slow compared to that of disruptive companies that release code several times a day.</p>
+<p>With<span>&nbsp;</span><a href="how-microservices-can-impact-your-business.html" rel="noopener" target="_blank">microservices</a>, you’re able to break that single, large block of an application your development teams work on into smaller bricks that can be worked on independently. This creates a number of benefits—and opportunities for a competitive advantage— for your own business.</p>
+<p>Here are a few of them ...</p>
+<h3><amp-img src="../hubfs/_icons/redapt_icon_velocity-data-delivery.svg" alt="redapt_icon_velocity-data-delivery" width="400.0" height="400.0" layout="responsive"></amp-img> <strong>1. Faster velocity</strong><span></span></h3>
+<p><br>With microservices, members of a development team are able to focus on smaller building blocks within the overall application.</p>
+<p>This means developers rarely need to wait on their other team members before finishing and deploying their own specific feature.</p>
+<p>In fact, the process of writing, testing, and deploying code to your end users<span>&nbsp;</span><strong>can be transformed from a rare event to one that happens several times a day.</strong></p>
+<h3><amp-img src="../hubfs/_icons/redapt_icon_recovery-backup.svg" alt="redapt_icon_recovery-backup" width="400.0" height="400.0" layout="responsive"></amp-img> <strong>2. Quicker recovery</strong><span></span></h3>
+<p><br>In a monolithic development environment, if one part of the software failed then the entire application would usually go down with it.</p>
+<p>Microservices takes away that problem since<strong><span>&nbsp;</span>your developers are working on independent segments of the application.</strong><span>&nbsp;</span>If one of those segments fails, the rest of the application is unaffected.<span>&nbsp;</span><span>It's also easier than ever to roll back code changes causing the failure and to fully recover.</span></p>
+<h3><amp-img src="../hubfs/_icons/redapt_icon_software-benefit-good-application.svg" alt="redapt_icon_software-benefit-good-application" width="400.0" height="400.0" layout="responsive"></amp-img> <strong>3. Better software<span>&nbsp;</span></strong><strong>quality</strong><span></span></h3>
+<p>Microservices allow developers to test specific bricks of code to limit potential bugs and security flaws in all the lines of code that make your app.</p>
+<h2><strong>More freedom, more complexity</strong></h2>
+<p><amp-img src="../hs-fs/hubfs/_photography/man-concentrating41ee.jpg?width=1920&amp;name=man-concentrating.jpg" alt="man-concentrating" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=960&amp;name=man-concentrating.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=1920&amp;name=man-concentrating.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=2880&amp;name=man-concentrating.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=3840&amp;name=man-concentrating.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=4800&amp;name=man-concentrating.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/man-concentrating.jpg?width=5760&amp;name=man-concentrating.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>Any major overhaul in development practices is going to bring a wide range of complexity—especially at the beginning.</p>
+<p>One element of this complexity is a steep learning curve. Your developers and IT professionals likely prefer to work with the tools and processes they’re most comfortable with.</p>
+<p>This means that when it comes to <a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank">microservices</a>, trying to do too much too soon will create a lot of speed bumps along the way.</p>
+<p>Because of this reality, the first step you need to take when adopting microservices is to take an assessment of your overall technical maturity.</p>
+<ul>
+<li>How ready are all your stakeholders, from developers to executives, to transform the way development is processed?&nbsp;</li>
+<li>Is everyone on the same page?&nbsp;</li>
+<li>What capabilities and expertise do you already have in-house?</li>
+</ul>
+<p>Unless you have answers to these and other questions, you’re setting yourself up to fail before you’ve even really started. So make sure to assess your technical maturity. To help you get started, you can check out <a href="https://content.redapt.com/tech-maturity-framework-ebook">an entire eBook we’ve written</a> on the subject.&nbsp;</p>
+<h2><strong>Elements of microservices architecture</strong></h2>
+<p><amp-img src="../hs-fs/hubfs/_photography/person-codingc631.jpg?width=1920&amp;name=person-coding.jpg" alt="person-coding" width="1920.0" srcset="https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=960&amp;name=person-coding.jpg 960w, https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=1920&amp;name=person-coding.jpg 1920w, https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=2880&amp;name=person-coding.jpg 2880w, https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=3840&amp;name=person-coding.jpg 3840w, https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=4800&amp;name=person-coding.jpg 4800w, https://www.redapt.com/hs-fs/hubfs/_photography/person-coding.jpg?width=5760&amp;name=person-coding.jpg 5760w" height="450.0" layout="responsive"></amp-img></p>
+<p>Part of what makes microservices and modern development practices so powerful is <strong>the speed in which new products can be worked on and brought to market.</strong></p>
+<p>Rather than waiting to launch new features—or fix critical errors—until all work on a monolithic application is completed, with microservices, incremental improvements can be completed and deployed on their own.</p>
+<p>Getting to the point where microservices are feasible, however, generally requires having five elements in place:</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/gear-check5cbe.jpg?width=81&amp;name=gear-check.jpg" alt="gear-check" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=41&amp;name=gear-check.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=81&amp;name=gear-check.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=122&amp;name=gear-check.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=162&amp;name=gear-check.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=203&amp;name=gear-check.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/gear-check.jpg?width=243&amp;name=gear-check.jpg 243w" height="81.0"></amp-img>1. Operations readiness</strong></h3>
+<p>As mentioned above, you need to have the skills in-house or, lacking that, work with the right partner in order to successfully get them up and running.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/squares-connectedb876.jpg?width=81&amp;name=squares-connected.jpg" alt="squares-connected" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=41&amp;name=squares-connected.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=81&amp;name=squares-connected.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=122&amp;name=squares-connected.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=162&amp;name=squares-connected.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=203&amp;name=squares-connected.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/squares-connected.jpg?width=243&amp;name=squares-connected.jpg 243w" height="81.0"></amp-img>2. Service discovery</strong></h3>
+<p>They need a way to find each other and communicate. Tools such as Service Meshand Kubernetes (on-premises and the cloud) make that coordination possible between microservices and the containers that house them.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation6748.png?width=80&amp;name=redapt_blog-graphics_automation.png" alt="redapt_blog-graphics_automation" width="167.0" srcset="https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=40&amp;name=redapt_blog-graphics_automation.png 40w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=80&amp;name=redapt_blog-graphics_automation.png 80w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=120&amp;name=redapt_blog-graphics_automation.png 120w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=160&amp;name=redapt_blog-graphics_automation.png 160w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=200&amp;name=redapt_blog-graphics_automation.png 200w, https://www.redapt.com/hs-fs/hubfs/2019.10%20Blog%20Images/redapt_blog-graphics_automation.png?width=240&amp;name=redapt_blog-graphics_automation.png 240w" height="167.0"></amp-img>3. Automation</strong></h3>
+<p>Fully leveraging the benefits of microservices means having automation to handle scaling of resources and volume as needed.</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/redapt_blog-graphics_securityb97a.png?width=80&amp;name=redapt_blog-graphics_security.png" alt="redapt_blog-graphics_security" width="168.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=40&amp;name=redapt_blog-graphics_security.png 40w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=80&amp;name=redapt_blog-graphics_security.png 80w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=120&amp;name=redapt_blog-graphics_security.png 120w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=160&amp;name=redapt_blog-graphics_security.png 160w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=200&amp;name=redapt_blog-graphics_security.png 200w, https://www.redapt.com/hs-fs/hubfs/_icons/redapt_blog-graphics_security.png?width=240&amp;name=redapt_blog-graphics_security.png 240w" height="168.0"></amp-img>4. Security</strong></h3>
+<p>The more pieces of an application, the easier it can be to let security measures such as who has access to what parts lax. Therefore, having strong security protocols in place <i>before</i> making the move is critical.&nbsp;</p>
+<h3><strong><amp-img src="../hs-fs/hubfs/_icons/mangifying-glass-bar-chartf15e.jpg?width=81&amp;name=mangifying-glass-bar-chart.jpg" alt="mangifying-glass-bar-chart" width="81.0" srcset="https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=41&amp;name=mangifying-glass-bar-chart.jpg 41w, https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=81&amp;name=mangifying-glass-bar-chart.jpg 81w, https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=122&amp;name=mangifying-glass-bar-chart.jpg 122w, https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=162&amp;name=mangifying-glass-bar-chart.jpg 162w, https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=203&amp;name=mangifying-glass-bar-chart.jpg 203w, https://www.redapt.com/hs-fs/hubfs/_icons/mangifying-glass-bar-chart.jpg?width=243&amp;name=mangifying-glass-bar-chart.jpg 243w" height="81.0"></amp-img>5. Monitoring</strong></h3>
+<p>When all your microservices are running at once, you need a way to keep an eye on usage, resources, and potential failures.</p>
+<h2><strong>Start small, build out from there</strong></h2>
+<p>All these steps and necessary elements aside, the key to successful microservices is to start small, then build out from there.</p>
+<p>Take a look at the applications you already have and choose one that would benefit the most. Then, start with a small part of that application to test the waters.</p>
+<p>Like any major shift in development processes, the general rule is to crawl, then walk, then run.</p>
+<p>To learn more about leveraging microservices for your business, check out our free guide, <a href="https://content.redapt.com/microservices-architecture-for-enterprises" rel="noopener" target="_blank"><i>The Complete Guide to Microservices Architecture for Enterprises</i></a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="making-the-move-to-microservices.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq01d9.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Making+the+Move+to+Microservices&amp;pi=28200419537&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/making-the-move-to-microservices?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:45:37 GMT -->
+</html>

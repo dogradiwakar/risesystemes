@@ -1,0 +1,213 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/how-pivotal-container-service-supports-container-security?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>How Pivotal Container Service Supports Container Security</title>
+    <link rel="canonical" href="how-pivotal-container-service-supports-container-security.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Explore how Pivotal Container Service (PKS) addresses container security issues, simplifying Kubernetes adoption. Be worry-free with a PKS solution.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How Pivotal Container Service Supports Container Security",
+        "datePublished": "2018-11-07T00:00:00Z",
+        "dateModified": "2020-08-31T22:31:06.113Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/how-pivotal-container-service-supports-container-security",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 650,
+          
+          
+          "height": 430,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/Imported_Blog_Media/5be3585ae93f9647d5077fe7_RDPT-049002_Blog_11_HOW20PIVOTAL20CONTAINER20SERVICE20SUPPORTS20CONTAINER20SECURITY20-20header20image.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="how-pivotal-container-service-supports-container-security.html">How Pivotal Container Service Supports Container Security</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Nov 7, 2018 12:00:00 AM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Containers and Kubernetes are being rapidly adopted by enterprises eager to embrace cloud-native application development. However, containers create new challenges for security because they dissociate the application from the underlying operating system where security protocols reside. In this post, we'll explore how <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/datasheet/services/vmware-pivotal-container-service-datasheet.pdf">Pivotal Container Service (PKS) </a>addresses the problem of container security while simplifying Kubernetes adoption for enterprises.</p>
+
+<h2><strong>PKS standardizes Kubernetes deployment </strong></h2>
+<p>PKS delivers <a href="https://kubernetesonvmware.com/">enterprise-grade Kubernetes</a> on VMware vSphere and Google Cloud Platform while ensuring constant compatibility with Google Container Engine (GKE). A game changer for the cloud-native ecosystem, PKS helps enterprises to reliably deploy and run containerized workloads across private and public clouds, ensuring continuity and stability every step of the way. Integrated with your existing infrastructure and the tools familiar to the operations team, PKS helps to secure the network and maintain a stable environment.</p>
+<h2><strong>A cloud-native approach to container security</strong></h2>
+<p>Engineered to provide a cloud-native approach in the challenging area of container security, PKS provides enterprises with peace of mind by delivering complete visibility and control of containerized applications through the entire lifecycle. Such an approach enables seamless integration with existing tools, ensures portability through independence from the underlying infrastructure, and delivers elastic scalability through embedded policies that apply across all containers and microservices.</p>
+<h2><strong>NSX-T: advanced container networking and security</strong></h2>
+<p>NSX-T, included with PKS, adds high availability, micro-segmentation, load balancing, and security policy to the container environment - enhancing and simplifying container networking and security as your organization scales with PKS. NSX-T deploys Kubernetes nodes on a separate subnet, making it easier to apply security policies that isolate and secure the Kubernetes clusters and namespaces from one another. In addition, PKS integration with Project Harbor, an open source container registry, enhances its security by means of vulnerability scanning and identity management functionality.</p>
+<h2><strong>Key security features of PKS</strong></h2>
+<ul>
+<li>PKS uses clusters to implement multi-tenancy while ensuring containers stay isolated. Clusters are deployed in a secure, isolated network to protect traffic and data privacy and to ensure compliance.</li>
+<li>PKS provides an enterprise-grade, secure container registry that scans container images for vulnerabilities to mitigate the risk of security breaches arising from contaminated images.</li>
+<li>Micro-segmentation, security policies, container image signing, vulnerability scanning, and user identity and access management are available through User Account and Authorization Service (UAA).</li>
+</ul>
+<h2><strong>Built-in security for a worry-free container experience</strong></h2>
+<p>Because advanced security is built into PKS, developers can focus on building great applications while allowing PKS to manage application security though micro-segmentation, container image management, identity and access management, and vulnerability scanning. Integrated features - including a private container registry with enterprise-grade management - ensure a consistent and worry-free container experience.</p>
+<h2><strong>Adopt containers securely with PKS and Redapt</strong></h2>
+<p>With Kubernetes emerging as the top choice for container orchestration, Redapt is one of just a few systems integrators with the capabilities to deliver a PKS solution. If container security is top of mind for your enterprise, you can learn more about PKS in <a href="https://kubernetesonvmware.com/"><strong>our latest ebook</strong></a>.</p><amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="how-pivotal-container-service-supports-container-security.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq89fd.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=How+Pivotal+Container+Service+Supports+Container+Security&amp;pi=12155671009&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/how-pivotal-container-service-supports-container-security?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:49 GMT -->
+</html>

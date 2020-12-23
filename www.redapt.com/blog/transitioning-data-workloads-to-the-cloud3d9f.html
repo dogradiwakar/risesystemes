@@ -1,0 +1,217 @@
+<!doctype html>
+<html amp lang="en">
+  
+<!-- Mirrored from www.redapt.com/blog/transitioning-data-workloads-to-the-cloud?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Navigating The Challenges of Transitioning Data Workloads To The Cloud</title>
+    <link rel="canonical" href="transitioning-data-workloads-to-the-cloud.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Redapt Marketing">
+
+    <meta name="description" content="Recently, in part one of a series of articles published by Microsoft Azure, Unravel Data CTO and Co-Founder Shivnath Babu offered up his company’s perspective of the current challenges companies face in making a successful migration to the cloud.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Navigating The Challenges of Transitioning Data Workloads To The Cloud",
+        "datePublished": "2019-12-02T20:42:44Z",
+        "dateModified": "2019-12-12T23:33:30.016Z",
+        "mainEntityOfPage": "https://www.redapt.com/blog/transitioning-data-workloads-to-the-cloud",
+        "author": {
+          "@type": "Person",
+          "name": "Redapt Marketing"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1800,
+          
+          
+          "height": 1200,
+          
+          "url": "https://cdn2.hubspot.net/hubfs/6151115/_other-graphics/19.11_data-on-screen_redapt_blog-graphics_1.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg",
+            "width": 60.000004,
+            "height": 60.0
+            
+          },
+          "name": "Insights"
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style></noscript>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../blog.html">
+        
+          <span class="logo">
+            <amp-img src="https://cdn2.hubspot.net/hubfs/6151115/Redapt_August2019/Images/logo.svg" height="60.0" width="60.000004" alt="logo"></amp-img>
+          </span>
+        
+          <span class="logo-header-text">Insights | Redapt</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="transitioning-data-workloads-to-the-cloud.html">Navigating The Challenges of Transitioning Data Workloads To The Cloud</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/redapt-marketing.html">Redapt Marketing</a> | Dec 2, 2019 8:42:44 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>The idea of moving data workloads to the cloud can be daunting, especially if your company has always relied upon on-premises solutions.</p>
+<p>Why? Because <strong>while the end goals of utilizing data may be the same on-premises and in the cloud, there are fundamental differences in how your company can get to that end goal.</strong></p>
+
+<p>Recently, in <a href="https://azure.microsoft.com/en-us/blog/transitioning-big-data-workloads-to-the-cloud-best-practices-from-unravel-data/" rel="noopener" target="_blank">part one of a series of articles</a> published by <em>Microsoft Azure</em>, <em>Unravel Data</em> CTO and Co-Founder Shivnath Babu offered up his company’s perspective of the current challenges companies face in making a successful migration to the cloud.</p>
+<p>From the article (emphasis ours):</p>
+<blockquote>
+<p>Today, IT uses many disparate technologies and siloed approaches to manage the various aspects of their modern data apps and Big Data infrastructure.</p>
+<p><strong>Many existing monitoring solutions often do not provide end-to-end support for Big Data environments, lack full-stack compatibility, or require complex instrumentation.</strong> This includes configuration changes to applications and their components, which requires deep subject matter expertise. The murky soup of monitoring solutions that organizations currently rely on doesn’t deliver the application agility that is required by the business.</p>
+<p>Consequently, <strong>this results in poor user experience, inefficiencies, and mounting costs as organizations buy more and more tools to solve these problems</strong> and then have to spend additional resources managing and maintaining those tools.</p>
+</blockquote>
+<p><amp-img src="../hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_14811.jpg?width=1200&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg" alt="19.11_searching-on-computer_redapt_blog-graphics_1" width="1200.0" srcset="https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=600&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 600w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=1200&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 1200w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=1800&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 1800w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=2400&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 2400w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=3000&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 3000w, https://www.redapt.com/hs-fs/hubfs/_other-graphics/19.11_searching-on-computer_redapt_blog-graphics_1.jpg?width=3600&amp;name=19.11_searching-on-computer_redapt_blog-graphics_1.jpg 3600w" height="267.0" layout="responsive"></amp-img></p>
+<p>From our experience, <em>Unravel</em> has this absolutely right.</p>
+<p>In many ways, <strong>the market for data workload migration into the cloud is still in its early stages.</strong> That means a lot of the tools IT has traditionally relied on are either not ready for prime time or are outside of their current capabilities.</p>
+<p>And this, obviously, can make IT nervous about the idea of migrating data workloads to the cloud. Especially if it could lead to poor user experience.</p>
+<p>As <em>Unravel’s</em> Babu points out later in his piece, this doesn’t have to be the case. In fact, <strong>we&nbsp;have partnered with <em>Unravel Data</em> on a joint offer to help you migrate your data workloads successfully.</strong></p>
+<p>Through this joint offer, you can utilize <em>Unravel’</em>s fleet of applications in order to gain a detailed understanding of your operational environment, your architecture, your performance, and more before making the move to the cloud.</p>
+<p>You also get access to our extensive experience with managing data migrations, from initial assessment and prioritization, to proof-of-concept and a robust plan for full migration.</p>
+<p>Migrating data workloads to the cloud doesn’t have to be scary, nor does it have to be budget breaking.</p>
+<p>All it takes to be successful is going in with a solid assessment of your needs, ways to monitor how your workloads will perform in the cloud, and a detailed plan to make the migration happen.</p>
+<p><a href="../contact.html" rel=" noopener">We can help cover all those bases for you. Reach out to our experts today.</a></p>
+<p>You can learn more about <em>Unravel</em> <a href="https://unraveldata.com/" rel="noopener" target="_blank"><u>at their website</u></a>. For more on data and the cloud, get your free copy of our whitepaper <a href="https://content.redapt.com/big-data-made-simple-wp" rel="noopener" target="_blank"><i>Big Data Made Simple</i></a>.</p>
+<amp-analytics type="googleanalytics"><script type="application/json">{
+  "vars": {
+    "account": "UA-2098698-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script></amp-analytics></span>
+        </div>
+        <div class="full-link">
+          <a href="transitioning-data-workloads-to-the-cloud.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq4a9a.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Navigating+The+Challenges+of+Transitioning+Data+Workloads+To+The+Cloud&amp;pi=21811816326&amp;a=6151115&amp;nc=true&amp;cgi=11355233533&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.redapt.com/blog/transitioning-data-workloads-to-the-cloud?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Dec 2020 06:50:20 GMT -->
+</html>
